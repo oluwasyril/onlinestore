@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="star.png">
+  <title>Check Out</title>
+  <style>
+    *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+          background-color: #000000;
+        }
+
+        button{
+          cursor: pointer;
+        }
+
+
+        @font-face {
+            font-family:Roboto-Regular ;
+            src: url(Roboto/Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Light ;
+            src: url(Roboto/Roboto-Light.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Medium ;
+            src: url(Roboto/Roboto-Medium.ttf);
+        }
+
+    #three-cont{
+      display: none;
+      position: absolute;
+        height: 100vh;
+            width: 100%;
+            background-color:#00000059;
+            z-index: 100;
+    }
+    .three-body {
+ --uib-size: 35px;
+ --uib-speed: 0.8s;
+ --uib-color: #5D3FD3;
+ /* position: relative; */
+ display: inline-block;
+ height: var(--uib-size);
+ width: var(--uib-size);
+ animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+ position: absolute;
+ left: 48%;
+  top: 120px;
+
+}
+
+.three-body__dot {
+ position: absolute;
+ height: 100%;
+ width: 30%;
+}
+
+.three-body__dot:after {
+ content: '';
+ position: absolute;
+ height: 0%;
+ width: 100%;
+ padding-bottom: 100%;
+ background-color: var(--uib-color);
+ border-radius: 50%;
+}
+
+.three-body__dot:nth-child(1) {
+ bottom: 5%;
+ left: 0;
+ transform: rotate(60deg);
+ transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(1)::after {
+ bottom: 0;
+ left: 0;
+ animation: wobble1 var(--uib-speed) infinite ease-in-out;
+ animation-delay: calc(var(--uib-speed) * -0.3);
+}
+
+.three-body__dot:nth-child(2) {
+ bottom: 5%;
+ right: 0;
+ transform: rotate(-60deg);
+ transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(2)::after {
+ bottom: 0;
+ left: 0;
+ animation: wobble1 var(--uib-speed) infinite
+    calc(var(--uib-speed) * -0.15) ease-in-out;
+}
+
+.three-body__dot:nth-child(3) {
+ bottom: -5%;
+ left: 0;
+ transform: translateX(116.666%);
+}
+
+.three-body__dot:nth-child(3)::after {
+ top: 0;
+ left: 0;
+ animation: wobble2 var(--uib-speed) infinite ease-in-out;
+}
+
+@keyframes spin78236 {
+ 0% {
+  transform: rotate(0deg);
+ }
+
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes wobble1 {
+ 0%,
+  100% {
+  transform: translateY(0%) scale(1);
+  opacity: 1;
+ }
+
+ 50% {
+  transform: translateY(-66%) scale(0.65);
+  opacity: 0.8;
+ }
+}
+
+@keyframes wobble2 {
+ 0%,
+  100% {
+  transform: translateY(0%) scale(1);
+  opacity: 1;
+ }
+
+ 50% {
+  transform: translateY(66%) scale(0.65);
+  opacity: 0.8;
+ }
+}
+
+.all-checkout{
+  position: relative;
+  left: 35%;
+  top: 60px;
+  width: 370px;
+}
+.checkout-header{
+  position: relative;
+  height: 60px;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #fff;
+  border-radius:  15px 15px 0 0;
+}
+.checkout-header h4{
+  font-family:Roboto-Medium ;
+  font-size:20px;
+  padding:5px  30px;
+}
+
+.checkout-header p{
+  margin-top: 5px;
+  padding: 0px 30px;
+  font-family:Roboto-Regular ;
+}
+#div0, #div1, #div2, #div3, #div4{
+      position: absolute;
+      width: 100%;
+      border-radius: 0 0 15px 15px;
+      overflow: hidden;
+    }
+
+    input{
+      border: none;
+      text-transform: uppercase;
+      outline: none;
+
+    }
+
+
+    #div0{
+      z-index: 7;
+      height: 62px;
+      
+    }
+    #div0 button{
+      border: none;
+      background-color: #c7c7ef;
+     margin-left: -4px;
+     width: 45px;
+     height: 100%;
+     color: #8f8fd6;
+ 
+    }
+
+    #div0 input{
+      background-color:#efefef;
+      color: #5D3FD3;
+      height: 100%;
+      width: 85%;
+      padding-left: 10px;
+    }
+
+    #div0 input::placeholder{
+  color: #8f8fd6;
+}
+    #div1{
+      z-index: 6;
+      height: 62px;
+      margin-top: 5px;
+    }
+    #div1 button{
+      border: none;
+      background-color: #d92139;
+     margin-left: -4px;
+     width: 45px;
+     height: 100%;
+     color: #253f58;
+ 
+    }
+
+    #div1 input{
+      background-color:#aec33a;
+      color: d92139;
+      height: 100%;
+      width: 85%;
+      padding-left: 10px;
+    }
+
+    #div1 input::placeholder{
+  color: #253f58;
+}
+    #div2{
+      height: 62px;
+      z-index: 5;
+      margin-top: 6px;
+      
+    }
+
+    #div2 button{
+      border: none;
+      background-color: #cc8a4d;
+     margin-left: -4px;
+     width: 45px;
+     height: 100%;
+     color: #bdbdbf;
+    }
+
+    #div2 input{
+      height: 100%;
+      width: 85%;
+      padding-left: 10px;
+      background-color: #32435f;
+      color: #5580a0;
+    }
+
+    #div2 input::placeholder{
+  color: #5580a0;
+  }
+    #div3{
+      height: 62px;
+      z-index: 4;
+      margin-top: 8px;
+    
+    }
+
+    #div3 button{
+      border: none;
+      background-color: #632a7e;
+     margin-left: -4px;
+     width: 45px;
+     height: 100%;
+     color: #d3b7d8;
+    }
+
+    #div3 input{
+      height: 100%;
+      width: 85%;
+      padding-left: 10px;
+      background-color: #a13e97;
+      color: #280e3b;
+    }
+
+    #div3 input::placeholder{
+  color: #280e3b;
+}
+    #div4{
+      height: 62px;
+      z-index: 3;
+      margin-top: 10px;
+     }
+     #div4 button{
+      border: none;
+      background-color: #e5bb4b;
+     margin-left: -4px;
+     width: 45px;
+     height: 100%;
+     color: #631f16;
+    }
+
+     #div4 input{
+      height: 100%;
+      width: 85%;
+      padding-left: 10px;
+      background-color: #498eaf;
+      color: #e4dace;
+    }
+
+    #div4 input::placeholder{
+  color: #e4dace;
+}
+
+
+#div5, #div6{
+      position: absolute;
+    }
+
+
+
+    #div5{
+      height: 100vh;
+      width: 100%;
+      display: none;
+      top: 0;
+      z-index: 10;
+      background-color: #000000;
+
+    }
+
+    .show-details{
+      position: absolute;
+      left: 35%;
+      top: 60px;
+      width: 370px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding-bottom: 10px;
+    }
+
+    .delivery-details{
+      padding: 10px 0px;
+      border-bottom: 1px solid #f1f1f2;
+      
+    }
+
+    .delivery-details p{
+      display: flex;
+      justify-content: center;
+      font-family:Roboto-Medium ;
+      color: #100f0faf;
+    }
+
+    .delivery-address{
+      padding: 5px;
+      font-family:Roboto-Regular ;
+      font-size: 15px;
+      color: #100f0f98;
+    }
+    .delivery-address div{
+      margin-top: 5px;
+    }
+
+    .delivery-address span{
+      font-family:Roboto-Regular ;
+      font-size: 12px;
+      color: #100f0f;
+      text-transform: uppercase;
+    }
+
+    .delivery-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+      gap: 10px;
+    }
+
+    .delivery-btn button{
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      font-family:Roboto-Regular ;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .back{
+      background-color: #dc2543;
+      color:#fec0c1;
+    }
+
+    .proceed{
+      background-color: #acc66d;
+      color: #50697d;
+    }
+    #div6{
+      height: 100vh;
+      width: 100%;
+      display: none;
+      top: 0;
+      z-index: 15;
+      background-color: #000000;
+    }
+
+    .payment{
+      position: absolute;
+      left: 35%;
+      top: 60px;
+      width: 370px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding-bottom: 10px;
+    }
+
+
+    .payment-text{
+      padding: 10px 0px;
+      border-bottom: 1px solid #f1f1f2;
+    }
+
+      .payment-text p{
+        display: flex;
+      justify-content: center;
+      font-family:Roboto-Medium ;
+      color: #100f0fb7;
+      }
+
+      .payment-btn{
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .payment-move{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+      }
+      
+      .flutter img{
+        height: 30px;
+        width: 175px;
+      }
+
+      .paystack img{
+        height: 30px;
+      }
+
+      .flutter, .paystack {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        padding: 6px 9px;
+        border: none;
+        font-family:Roboto-Regular ;
+        border-radius: 5px;
+      }
+
+      .flutter{
+        background:#F2C94C ;
+      }
+      .flutter:hover{
+        background:#ffd24a6b ;
+      }
+
+      .paystack{
+        background:#FFB80A ;
+      }
+
+      .paystack:hover{
+        background:#ffba0a6c ;
+      }
+
+
+      .close{
+
+                cursor: pointer;
+                position: absolute;
+                right: -6px;
+                top: -6px;
+                display: none;
+            
+            }
+
+            .fa-circle-xmark{
+               font-size: 25px;
+               background-color: #000;
+               border-radius: 100%;
+            }
+
+            .fa-circle-xmark:hover{
+                color: #e61600 !important;
+                background-color: #fff;
+               
+            }
+
+            .payment:hover .close{
+              display: block;
+            }
+
+    
+  </style>
+</head>
+<body>
+  
+
+  <div id="three-cont">
+    <div class="three-body">
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+    </div>
+  </div>
+
+  <div class="all-checkout">
+    <div class="checkout-header">
+      <h4> CHECKOUT</h4>
+      <p> fill in your delivery details</p>
+    </div>
+    <div id="div0">
+      <input type="number" placeholder="Enter your Number" id="inp0">
+      <button onclick="changeSlide(div0, inp0)"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <div id="div1">
+      <input type="text" placeholder="Enter your State" id="inp1">
+      <button onclick="changeSlide(div1, inp1)"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <div id="div2">
+      <input type="text" placeholder="Enter your City" id="inp2">
+      <button onclick="changeSlide(div2, inp2)"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <div id="div3">
+      <input type="text" placeholder="Enter your Local Government" id="inp3">
+      <button onclick="changeSlide(div3, inp3)"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <div id="div4">
+      <input type="text" placeholder="Enter your Street" id="inp4">
+      <button onclick="proceed(div4, inp4)"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <div id="div5"></div>
+    
+  <div id="div6"></div>
+</body>
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script>
+   let loggedUser = JSON.parse(localStorage.getItem("loginUser"))
+    if (loggedUser == null){
+      window.location.href = "signin-signup.html"
+    }
+  let userArr = []
+function changeSlide(id, id2){
+  if (id2.value == ""){
+    alert("field cannot be empty")
+  }
+  else{
+    id.style.zIndex = "1"
+    userArr.push(id2.value)
+  }
+}
+let div5 = document.getElementById("div5")
+function proceed(id, id2){
+  userArr.push(id2.value)
+  if (id2.value == ""){
+    alert("field cannot be empty")
+  }
+  else{
+    div5.innerHTML += `
+    <div class="show-details">
+      <div class="delivery-details"> <p>CONFIRM YOUR DELIVERY DETAILS</p> </div>
+      <div class="delivery-address">
+      <div>Street: <span> ${userArr[4]}</span> </div>
+      <div>LGA: <span>${userArr[3]}</span> </div>
+      <div>City: <span>${userArr[2]}</span> </div>
+      <div>State: <span>${userArr[1]}</span> </div>
+      <div>Number: <span>${userArr[0]}</span> </div>
+      <div>Delivery fee: <span># 1,000</span></div>
+      <div class="delivery-btn">
+      <button onclick="back()" class="back">Go back</button>
+      <button onclick="payment()" class="proceed">Proceed to Payment</button>
+      </div>
+      </div>
+    </div>
+
+    `
+    div5.style.display = "block"
+    }
+}
+function back(){
+  window.location.href = "checkout.html"
+}
+let threeCont = document.getElementById("three-cont")
+let div6 = document.getElementById("div6")
+let price = localStorage.getItem("productPrice")
+let date = new Date()
+function payment(){
+  let myObj = {
+    Number : userArr[0],
+    State : userArr[1],
+    City : userArr[2],
+    LGA : userArr[3],
+    Street : userArr[4],
+    Date : date
+  }
+  fetch("http://localhost:1234/address", {
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(myObj),
+      method: "POST"
+  }).then((resp) => resp.json())
+  .then((prod) => {
+    localStorage.setItem("prodId", prod.id)
+  })
+  threeCont.style.display = "block"
+  setTimeout(() =>{
+    threeCont.style.display = "none"
+    div6.innerHTML = `
+    <div class="payment">
+      <div class="payment-text"> <p> SELECT YOUR PAYMENT METHOD</p>     <div onclick="clse()" class="close"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i></div></div>
+      <div class="payment-move">
+        <div class="payment-btn">
+          
+
+          <div ><button onclick="makePayment()" class="flutter"> <div>Pay with</div> <div><img src="Flutterwave-New-Logo-2022-Transparent.png" alt=""></div></button></div>
+          <div ><button onclick="payStack()" class="paystack"> <div>Pay with</div> <div> <img src="Paystack.png" alt=""></div> </button></div>
+      </div>
+      </div>
+     
+    </div>
+   
+    `
+    div6.style.display = "block"
+    }, 2500)
+   
+}
+const paystack = new PaystackPop();
+function payStack(){
+  let newPrice = Number(price) + 1000
+  paystack.newTransaction({
+        key: 'pk_test_dd6b60a77a9f0df0205a8b872874d7537c49722d',
+        email: `${loggedUser.email}`,
+        amount: Number(newPrice)*100,
+        onSuccess: (transaction) => { 
+        window.location.href = "newcheckout.html"
+        },
+        onCancel: () => {
+            alert("Transaction Failed")
+        }
+    });
+
+
+}
+let numb = document.getElementById("div0")
+function makePayment() {
+  let newPrice = Number(price) + 1000
+    FlutterwaveCheckout({
+      public_key: "FLWPUBK_TEST-22233e9a7a94513170660a1c059e2854-X",
+      tx_ref: "titanic-48981487343MDI0NzMx",
+      amount: newPrice,
+      currency: "NGN",
+      payment_options: "card, banktransfer, ussd",
+      redirect_url: "newcheckout.html",
+      meta: {
+        consumer_id: 23,
+        consumer_mac: "92a3-912ba-1192a",
+      },
+      customer: {
+        email: `${loggedUser.email}`,
+        phone_number: `${numb.value}`,
+        name: `${loggedUser.name}`
+      },
+      customizations: {
+        title: "Syril Online Store",
+        description: "we give quality with massive discount",
+        logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+      },
+    });
+  }
+
+  function clse(){
+    window.location.href = "checkout.html"
+    // div6.innerHTML = ""
+   
+}
+</script>
+<script src="all.js"></script>
+</html>

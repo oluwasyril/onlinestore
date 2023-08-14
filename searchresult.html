@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="star.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Search Results</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family:Roboto-Regular ;
+            src: url(Roboto/Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Light ;
+            src: url(Roboto/Roboto-Light.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Medium ;
+            src: url(Roboto/Roboto-Medium.ttf);
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        body{
+            background-color: #f1f1f2;
+           
+        }
+
+
+                header{
+            height: 70px;
+            width: 100%;
+            background-color: #f1f1f2;
+            }
+
+            .header-one{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ff9900;
+            }
+
+            .header-one img{
+                height: 40px;
+                
+            }
+
+            .header-two{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 85%;
+            }
+
+            .side-one{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .side-one a{
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .side-one a:hover{
+                text-decoration: underline;
+            }
+
+            .side-one img{
+                height: 10px;
+               
+            }
+
+            /* .side-two{
+                display: flex;
+                align-items: center;
+            } */
+
+            .side-two a{
+                text-decoration: none;
+            }
+
+            .side-two img{
+                height: 18px;
+                padding: 3px;
+            }
+
+            .side-two img:hover{
+                filter: invert(71%) sepia(13%) saturate(6556%) hue-rotate(328deg) brightness(98%) contrast(97%);
+    
+            }
+        
+
+            nav{
+                height: 52px;
+                width: 100%;
+                background-color: #ffffff;
+                display: flex;
+                gap: 50px;
+                justify-content: center;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                z-index: 20;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+
+
+            .first-nav{
+                /* width: 20%; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 40px;
+                
+            
+            }
+
+            #newMenu{
+            position: relative;
+            padding: 30px;
+        }
+        .newMenu-content{
+            position: absolute;
+            background-color: #fff;
+            height: fit-content;
+            width: 130px;
+            border-radius: 5px;
+            top: 55px;
+            padding: 8px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            display: none;
+        }
+
+        .newMenu-content::before{
+            content: "";
+            position: absolute;
+            background-color: #ffffff;
+            height: 11px;
+            width: 11px;
+            top: -4px;
+            left: 3px;
+            transform: rotate(45deg);
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            z-index: -1;
+        }
+
+
+        .newMenu-content p{
+              
+              margin-top: 10px;
+              cursor: pointer;
+            
+          }
+
+          .newMenu-content p:nth-child(1){
+            margin-top: 1px;
+          }
+          .newMenu-content p:hover .icon{
+              color:#ff9900 !important;
+          }
+
+          .newMenu-content p:hover{
+              color:#ff9900
+          }
+
+          .newMenu-content span{
+              font-family:Roboto-Light ;
+              font-size: 11px;
+              margin-left: 5px;
+           
+          }
+
+          .icon{
+              font-size: 15px;
+  
+          }
+
+          .fa-house, .fa-kitchen-set{
+              margin-left: -3px;
+          }
+
+          .fa-mobile-screen-button{
+              margin: 1px;
+          }
+
+          .fa-computer, .fa-tv, .fa-shirt, .fa-gamepad, .fa-dumbbell,.fa-chalkboard{
+              margin-left: -4px;
+          }
+
+
+
+
+            .first-nav img{
+                    height: 50px;
+                    margin-left: 30px;
+            }
+
+            .second-nav{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 60%;
+                
+            }
+            .first{
+                display: flex;
+                align-items: center;
+                width: 60%;
+            }
+            .first input{
+                width: 100%;
+                padding: 8px 30px;
+                border-radius:4px;
+                outline: none;
+                border: 1px solid gray;
+            }
+            .fa-magnifying-glass{
+                margin-right: -24px;
+                z-index: 10;
+            }
+
+            .first button{
+                margin-left: 5px;
+                padding: 9px 13px;
+                border-radius:4px;
+                border: none;
+                background-color: #ff9900;
+                color: #fff;
+            }
+
+            .first button:hover{
+                background-color: #E07E1B;
+            }
+
+            .second{
+                position: relative;
+                font-size: 13px;
+            }
+
+            .second button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+            .second button:hover{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-user{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+            .fa-user{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        
+          .fa-angle-down{
+            margin-left: 5px;
+          }
+
+          .second button:focus{
+            background-color: #00000038;
+           
+          }
+
+            .second-content{
+                position: absolute;
+                top: 38px;
+                left: -30px;
+                width: 160px;
+                height: 168px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .second:focus-within .second-content{
+                display: block;
+            }
+
+            .sign-in{
+                padding: 12px;
+                border-bottom: 1px solid #f1f1f2;
+            }
+
+            .sign-in button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 8px 20px;
+            }
+
+            .sign-in button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+            .my-account, .order, .saved{
+                padding: 8px;
+                font-family:Roboto-Light ;
+                font-size: 13px;
+
+            }
+
+            .my-account:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .order:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .saved:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+
+
+            .account-text, .saved-text{
+                margin-left: 13px;
+                cursor: pointer;
+            }
+            .order-text{
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+            }
+
+            .fa-angle-down{
+                font-size: 10px;
+            }
+
+
+
+            .third{
+                position: relative;
+            }
+
+            .third-content{
+                position: absolute;
+                top: 35px;
+                left: -50px;
+                width: 160px;
+                height: 200px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .third:focus-within .third-content{
+                display: block;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+
+            .third button:focus{
+            background-color: #00000038;
+           
+          }
+
+
+            .third button:hover{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-circle-question{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+
+
+            .fa-circle-question{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+         
+
+            .live-chat{
+                padding: 12px;
+                border-top: 1px solid #f1f1f2;
+            }
+
+            .live-chat button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 6px 20px;
+                border-radius: 4px;
+            }
+
+             .live-chat button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+
+            .help,.track,.cancel,.return,.payment{
+                padding: 6px;
+                font-family:Roboto-Light ;
+                font-size: 11px;
+                cursor: pointer;
+                }
+
+
+                .help:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .track:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .cancel:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .return:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .payment:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+
+            .forth a{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                text-decoration: none;
+                color: #000000;
+                position: relative;
+                display: flex;
+                gap: 4px;
+               
+            }
+
+
+            #showCart{
+                position: absolute;
+                left: 5px;
+                top:-8px;
+                padding: 1px 5px;
+                background-color: #ff9900;
+                font-family:Roboto-Regular ;
+                font-size: 8px;
+                color: #fff;
+                border-radius: 10px;
+            }
+            .forth a:hover{
+                color: #ff9900 !important;
+            }
+
+            .forth a:hover .fa-cart-shopping{
+                color: #ff9900 !important;
+            }
+
+            .welcome{
+            text-transform: uppercase;
+         }
+
+         .saved a{
+            text-decoration: none;
+            color: black;
+         }
+
+        main{
+            width: 65%;
+            margin: auto;
+            padding: 10px;
+         
+        }
+        section{
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        section img{
+            height: 40vh;
+            border-radius: 5px;
+        }
+
+        .found-search{
+            width: 100%;
+        }
+
+        .found-search img{
+            height: 100px;
+            margin-top: 5px;
+        }
+        .search-results{
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .search-head{
+            border-bottom: 1px solid rgb(99, 96, 96);
+            background-color: #E07E1B; 
+            border-radius: 5px 5px 0 0;
+        }
+
+        .search-head div{
+         padding:5px;
+        }
+
+        #search{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            padding-top: 20px;
+       
+        }
+        .for-search{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 180px;
+            cursor: pointer;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            transition: 0.5s;
+
+        }
+
+        .container .card:hover {
+    height: 200px;
+    cursor: pointer;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 150px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -45px;
+    scale: 0.75;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5;
+    
+
+}
+
+.container .card .content {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.content div{
+margin-left: -5px;
+font-family:Roboto-Regular ; 
+font-size: 12px;
+}
+
+.container .card:hover .content {
+    top: 90px;
+    height: 250px;
+}
+
+
+
+        .not-found2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 10px;
+        }
+
+        .not-found2 img{
+            height: 400px;
+        }
+
+        .found-not h1{
+            font-family:Roboto-Medium ;
+            font-size: 25px;
+            color: #3f3f41;
+        }
+        .looking{
+            font-family:Roboto-Medium ; 
+            font-size: 14px;
+            width: 70%;
+            color: #3f3f41;
+        }
+        .browse{
+            font-family:Roboto-Regular ; 
+            font-size: 12px;
+            width: 70%;
+            color: #3f3f41;
+        }
+
+        #show-images{
+            height: 120px;
+            background-color: aqua;
+            width: 100%;
+        }
+
+        .homepage{
+            background-color: #ff9900;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-family:Roboto-Regular ; 
+            font-size: 12px;
+            color: #fff;
+
+        }
+
+        .homepage:hover{
+            background-color: #E07E1B;
+        }
+
+        .order a{
+                text-decoration: none!important;
+                color: #000000;
+              }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-one"> 
+            <img src="ann.gif" alt="">
+    
+        
+        </div>
+
+        <div class="header-two">
+            <div class="side-one">
+                <img src="star.png" alt="">
+                <a href="">Sell on Jumia</a>
+            </div>
+            <div class="side-two">
+               <a href="">  <img src="jumia.png" alt=""> </a> 
+               <a href=""> <img src="jumiapay.png" alt=""> </a> 
+               <a href=""> <img src="jumiafood.png" alt=""> </a> 
+               <a href=""> <img src="jumiaparty.png" alt=""> </a> 
+                <a href=""> <img src="jumialog.png" alt=""> </a>
+
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        
+     
+        <div class="first-nav">
+            <div id="newMenu" onmouseover="newMenu()" onmouseout="offMenu()"><i class="fa-solid fa-bars" ></i>
+                <div class="newMenu-content" id="Menu">
+
+                    <p onclick="category('Grocery')"> <i class="fa-solid fa-apple-whole icon" style="color: #000000;"></i> <span> Supermarket</span></p>
+                    <p onclick="category('Health & beauty')"> <i class="fa-solid fa-spray-can-sparkles icon" style="color: #000000;"></i><span> Health & Beauty</span></p>
+                    <p onclick="category('Home & office')"> <i class="fa-solid fa-house icon" style="color: #000000;"></i> <span> Home & Office</span></p>
+                    <p onclick="category('Appliances')"> <i class="fa-solid fa-kitchen-set icon" style="color: #000000;"></i> <span> Appliances</span></p>
+                    <p onclick="category('Smartphone')"> <i class="fa-solid fa-mobile-screen-button icon" style="color: #000000;"></i> <span> Phones & Tablets</span></p>
+                    <p onclick="category('Computing')"> <i class="fa-solid fa-computer icon" style="color: #000000;"></i><span> Computing</span></p>
+                    <p onclick="category('Electronics')"> <i class="fa-solid fa-tv icon" style="color: #000000;"></i> <span> Electronics</span></p>
+                    <p onclick="category('Fashion')"> <i class="fa-solid fa-shirt icon" style="color: #000000;"></i><span> Fashion</span></p>
+                    <p onclick="category('Baby products')"> <i class="fa-solid fa-baby icon" style="color: #000000;"></i> <span> Baby Products</span></p>
+                    <p onclick="category('Gaming')"> <i class="fa-solid fa-gamepad icon" style="color: #000000;"></i> <span class="gaming"> Gaming</span></p>
+                    <p onclick="category('Sporting')"> <i class="fa-solid fa-dumbbell icon" style="color: #000000;"></i><span> Sporting Goods</span></p>
+                    <p onclick="category('other')"> <i class="fa-solid fa-chalkboard icon" style="color: #000000;"></i><span> Other category</span></p>
+
+                </div>
+            </div>
+
+            <div class="home-images"> 
+                 <a href="index.html"> <img src="Jumia-Logo.png" alt=""></a> 
+            </div>
+        </div>
+
+        <div class="second-nav">
+
+
+            <div class="first">
+                <i class="fa-solid fa-magnifying-glass" style="color: #adadad;"></i>
+                <input type="text" placeholder="Search products, brands and categories" id="inp">
+                <button onclick="searchBar(inp)"> SEARCH</button>
+            </div>
+
+
+            <div class="second">
+                
+                <button id="acct">
+                </button>
+                
+                <div class="second-content">
+                    <div class="sign-in" id="signIn"></div>
+                    </div>
+                
+            </div>
+            <div class="third">
+              
+                 <button>
+                    <i class="fa-regular fa-circle-question" style="color: #000000;"></i>
+                    Help
+                    <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+                </button>
+                
+                <div class="third-content">
+                   <div class="help"> Help Center</div>
+                   <div class="track"> Place & track order</div>
+                   <div class="cancel"> Order cancellation</div>
+                   <div class="return"> Retruns & Refunds</div>
+                   <div class="payment"> Payment & Jumia account </div>
+                   <div class="live-chat"> <button> LIVE CHAT</button></div>
+                </div>
+              
+               
+            </div>
+            <div class="forth">
+              
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>   <div>Cart</div>
+                    <span id="showCart"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="show1">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="https://ng.jumia.is/cms/0-1-initiatives/official-stores/2023/Updated-creative/Desktop_MLP_Slider__1168x384.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/samsung/2023/march/1168x384.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/hisense/Hisense_1168px_384px.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/infinix/2022/september/Infinix-Zero-20-jumia-(Banner-A).jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/hp/2022/1168x384.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/microsoft/2022/1168x384.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+          
+        </section>
+            <div class="found-search" id="show2">
+                <div class="search-results">
+                    <div class="search-head">
+                        <div>Search Results</div> 
+                    </div>
+                    <div class="search-content container" id="search">
+                       
+                    </div>
+                  </div>
+            </div>
+        <div id="show3" class="not-found2">
+            <div class="found-not">
+                <h1> Not Found</h1>
+                <p class="looking"> We couldn’t find the page you are looking for</p>
+                <p class="browse"> But we have millions more shopping items for you to browse!</p>
+                <div> <button class="homepage" onclick="homepage()"> Go to homepage</button></div>
+            </div>
+            <div>
+                <img src="https://www.jumia.com.ng/assets_he/images/people.9416a3fb.svg" alt="">
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+<script src="all.js"></script>
+</html>
+
+<script>
+
+let userInp = localStorage.getItem("searchItem").toLowerCase()
+    let sear = document.getElementById("search")
+    let show1 = document.getElementById("show1")
+    let show2 = document.getElementById("show2")
+    let show3 = document.getElementById("show3")
+    let allProduct = JSON.parse(localStorage.getItem("newshop"))
+
+    let find = allProduct.filter((e) => e.title.toLowerCase().includes(userInp) || e.category.toLowerCase().includes(userInp))
+    
+    if (find){
+        for (i=0; i < find.length; i++){
+        sear.innerHTML += `
+       <div onclick="showProduct(${find[i].id})" class="for-search card">
+
+        <div class="img-box"> <img src="${find[i].thumbnail}" alt=""></div>
+        <div class="content">
+            <div class="text-truncate">${find[i].title}</div>
+            <div class="text-truncate">${find[i].price}</div>
+            <div class="text-truncate"> <span>Category:</span> ${find[i].category}</div>
+            <div class="text-truncate"> <span>Brand:</span> ${find[i].brand}</div>
+            <div class="text-truncate"> <span>Discount:</span> ${find[i].discount}%</div>
+          
+        </div>
+      
+
+        </div>
+        `
+        show1.style.display ="block"
+        show2.style.display ="block"
+        show3.style.display ="none"
+        }
+    }
+    if (find.length == 0){
+        show1.style.display ="none"
+        show2.style.display ="none"
+        show3.style.display ="flex"
+        
+
+    }
+
+    function showProduct(id){
+        localStorage.setItem("productId", id)
+        window.location.href = "product.html"   
+    }
+
+       let Menu = document.getElementById("Menu")
+
+       let acct = document.getElementById("acct")
+    let sign_in = document.getElementById("signIn")
+    let loggedUser = JSON.parse(localStorage.getItem("loginUser"))
+    console.log(loggedUser)
+    if (loggedUser != null){
+        acct.innerHTML = `<div class="welcome"> HI ${loggedUser.name} </div>`
+        sign_in.innerHTML = `
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+        <div class="order" > <a href="order.html"><i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></a></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <span class="saved-text">Saved Item</span></div>
+        <button onclick="logout()">LOG OUT</button>
+        `
+    }
+    else{
+        acct.innerHTML = `
+        <i class="fa-regular fa-user" style="color: #000000;"></i>
+        Account
+        <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+        `
+        sign_in.innerHTML = `
+        <button onclick="signin()">SIGN IN</button>
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+         <div class="order"> <i class="fa-solid fa-shop" style="color: #000000;"></i>  <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <span class="saved-text">Saved Item</span></div>
+        `
+    }
+
+
+       function category(val){
+        localStorage.setItem("categories", val)
+        window.location.href = "category.html"
+    }
+
+       function newMenu(){
+        Menu.style.display ="block"
+    }
+
+    function offMenu(){
+        Menu.style.display ="none"
+    }
+
+
+    function signin(){
+        window.location.href = "signin-signup.html"
+    }
+
+    function logout(){
+        localStorage.removeItem("loginUser")
+        window.location.href = "index.html"
+    }
+
+    function homepage(){
+        window.location.href = "index.html"
+    }
+
+    let showCart = document.getElementById("showCart")
+    function fetchCart(){
+        fetch("http://localhost:1234/cart")
+        .then((res)=>res.json())
+        .then((data)=>{
+            cart = data;
+            showCart.innerHTML = cart.length == 0 ? null : cart.length
+            if (showCart.innerHTML == ""){
+                showCart.style.padding = "0"
+            }
+        })
+    }
+    fetchCart()
+
+    function searchBar(inp){
+  localStorage.setItem("searchItem", inp.value)
+  window.location.href = "searchresult.html"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

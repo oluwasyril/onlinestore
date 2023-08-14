@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+    <title>Home | shopping</title>
+    <link rel="icon" href="star.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <!-- <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family:Roboto-Regular ;
+            src: url(Roboto/Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Light ;
+            src: url(Roboto/Roboto-Light.ttf);
+        }
+
+        button{
+            cursor: pointer;
+        }
+        body{
+            background-color: #B90324;
+        }
+        .green{
+            background-color: #ff9900;
+            height: 30px;
+            width: 70px;
+            border-radius: 40px;
+            /* margin-top: 30px; */
+            position: absolute;
+            right: 2%;
+        }
+        .green.slide{
+            background-color: rgb(196, 221, 244);
+        }
+        .white{
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            position: absolute;
+            left: 10%;
+            top: 16%;
+            transition: .3s ease;
+        }
+        .green.slide .white{
+            left: 60%;
+            background-color: #ff9900;
+        }
+
+        header{
+            height: 70px;
+            width: 100%;
+            background-color: #f1f1f2;
+            }
+
+            .header-one{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #B90324;
+            }
+
+            .header-one img{
+                height: 40px;
+                
+            }
+
+            .header-two{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 85%;
+            }
+
+            .side-one{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .side-one a{
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .side-one a:hover{
+                text-decoration: underline;
+            }
+
+            .side-one img{
+                height: 10px;
+               
+            }
+
+            /* .side-two{
+                display: flex;
+                align-items: center;
+            } */
+
+            .side-two a{
+                text-decoration: none;
+            }
+
+            .side-two img{
+                height: 18px;
+                padding: 3px;
+            }
+
+            .side-two img:hover{
+                filter: invert(71%) sepia(13%) saturate(6556%) hue-rotate(328deg) brightness(98%) contrast(97%);
+    
+            }
+        
+
+            nav{
+                height: 70px;
+                width: 100%;
+                background-color: #ffffff;
+                display: flex;
+                gap: 50px;
+                justify-content: space-around;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                z-index: 20;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .animation{
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                left: 0;
+                top: 0;
+                background-color: rgb(4, 189, 60);
+                z-index: 40;
+                display: none;
+            }
+
+            .animation p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                color: #fff;
+            }
+
+            .first-nav{
+                /* width: 10%; */
+                margin-left: 50px;
+              
+            }
+
+            .first-nav img{
+                    height: 60px;
+                    margin-left: 40px;
+            
+                  
+            }
+
+            .second-nav{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 80%;
+            }
+            .first{
+                display: flex;
+                align-items: center;
+                width: 60%;
+            }
+            .first input{
+                width: 100%;
+                padding: 8px 30px;
+                border-radius:4px;
+                outline: none;
+                border: 1px solid gray;
+            }
+            .fa-magnifying-glass{
+                margin-right: -24px;
+                z-index: 10;
+            }
+
+            .first button{
+                margin-left: 5px;
+                padding: 9px 13px;
+                border-radius:4px;
+                border: none;
+                background-color: #ff9900;
+                color: #fff;
+            }
+
+            .first button:hover{
+                background-color: #E07E1B;
+            }
+
+            .second{
+                position: relative;
+                font-size: 13px;
+            }
+
+            .second button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+            .second button:hover{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-user{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+            .fa-user{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        
+          .fa-angle-down{
+            margin-left: 5px;
+          }
+
+          .second button:focus{
+            background-color: #00000038;
+           
+          }
+
+            .second-content{
+                position: absolute;
+                top: 38px;
+                left: -30px;
+                width: 160px;
+                height: 168px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .second:focus-within .second-content{
+                display: block;
+            }
+
+            .sign-in{
+                padding: 12px;
+                border-bottom: 1px solid #f1f1f2;
+            }
+
+            .sign-in button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 8px 20px;
+            }
+
+            .sign-in button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+            .my-account, .order, .saved{
+                padding: 8px;
+                font-family:Roboto-Light ;
+                font-size: 13px;
+
+            }
+
+            .my-account:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .order:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .saved:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+
+
+            .account-text, .saved-text{
+                margin-left: 13px;
+                cursor: pointer;
+            }
+            .order-text{
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .order a{
+                text-decoration: none!important;
+                color: #000000;
+              }
+
+
+            .third button{
+                background:none;
+                border: none;
+            }
+
+            .fa-angle-down{
+                font-size: 10px;
+            }
+
+
+
+            .third{
+                position: relative;
+            }
+
+            .third-content{
+                position: absolute;
+                top: 35px;
+                left: -50px;
+                width: 160px;
+                height: 200px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .third:focus-within .third-content{
+                display: block;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+
+            .third button:focus{
+            background-color: #00000038;
+           
+          }
+
+
+            .third button:hover{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-circle-question{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+
+
+            .fa-circle-question{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+         
+
+            .live-chat{
+                padding: 12px;
+                border-top: 1px solid #f1f1f2;
+            }
+
+            .live-chat button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 6px 20px;
+                border-radius: 4px;
+            }
+
+             .live-chat button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+
+            .help,.track,.cancel,.return,.payment{
+                padding: 6px;
+                font-family:Roboto-Light ;
+                font-size: 11px;
+                cursor: pointer;
+                }
+
+
+                .help:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .track:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .cancel:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .return:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .payment:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+
+            .forth a{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                text-decoration: none;
+                color: #000000;
+                position: relative;
+                display: flex;
+                gap: 4px;
+               
+            }
+
+
+            #showCart{
+                position: absolute;
+                left: 5px;
+                top:-8px;
+                padding: 1px 5px;
+                background-color: #ff9900;
+                font-family:Roboto-Regular ;
+                font-size: 8px;
+                color: #fff;
+                border-radius: 10px;
+            }
+            .forth a:hover{
+                color: #ff9900 !important;
+            }
+            
+
+            .forth a:hover .fa-cart-shopping{
+                color: #ff9900 !important;
+            }
+
+            main{
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.202), rgba(0, 0, 0, 0.059)), url('https://ng.jumia.is/cms/0-6-anniversary/2023/After-party/Brands/Binatone/JA-bg.png');
+                /* height: 2660px; */
+                height: fit-content;
+                padding:10px ;
+                width:100%;
+                background-size: 1630px;
+                background-position-x: 53%;
+              
+            }
+
+
+            .main-all{
+                margin: auto;
+                /* height: 50vh; */
+                height: fit-content;
+                width: 80%;
+                border-radius: 5px;
+            }
+
+            .all-section{
+               /* padding-top: 5px; */
+               /* margin-top: 10px; */
+               /* height: 50vh; */
+               height: fit-content;
+               width: 100%;
+               display: flex;
+               gap: 10px;
+            }
+
+            .left-section{
+                background-color: #fff;
+                /* height: 50vh; */
+                height: fit-content;
+               width: 20%;
+               border-radius: 5px;
+               margin-top: 15px;
+               padding: 8px;
+            }
+            .left-section p{
+              
+                margin-top: -16px;
+                cursor: pointer;
+              
+            }
+
+            .left-section p:hover .icon{
+                color:#ff9900 !important;
+            }
+
+            .left-section p:hover{
+                color:#ff9900
+            }
+
+            .left-section span{
+                font-family:Roboto-Light ;
+                font-size: 11px;
+                margin-left: 5px;
+             
+            }
+
+            .left-section-all{
+                margin-top: 15px;
+            }
+
+            .icon{
+                font-size: 15px;
+    
+            }
+
+            .fa-house, .fa-kitchen-set{
+                margin-left: -3px;
+            }
+
+            .fa-mobile-screen-button{
+                margin: 1px;
+            }
+
+            .fa-computer, .fa-tv, .fa-shirt, .fa-gamepad, .fa-dumbbell,.fa-chalkboard{
+                margin-left: -4px;
+            }
+
+            /* .gaming{
+                margin-left: -15px;
+                
+            } */
+         
+
+            .middle-section{
+                /* height: 50vh; */
+                height: fit-content;
+                width: 60%;
+                border-radius: 5px;
+            }
+
+            .middle-section img{
+                height: 52.5vh;
+                border-radius: 5px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                margin-top: 15px;
+            }
+
+            .right-section{
+                height: fit-content;
+               width: 20%;
+            }
+
+            .right-section img{
+                height: 24.9vh;
+                border-radius: 5px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                margin-top: 15px;
+               
+            }
+
+            .all-items{
+          height: fit-content;
+          background-color: #fff;
+          width: 98%;
+          border-radius: 5px;
+          margin-top: 30px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .all-items.change{
+                background-color: black;
+                color: white;
+            }
+
+            .ann-deals{
+                height: 40px;
+                width: 100%;
+                background-color: #fee2cc;
+                padding: 7px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                font-family:Roboto-Regular ;
+                font-size: 18px;
+            }
+
+            .ann-deals.change{
+                background-color: black;
+                color: white;
+                border-bottom: 1px solid #ff9900;
+            }
+
+            .test{
+            /* margin-top: 10px; */
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          flex-wrap: wrap;
+          gap: 15px;
+          padding: 20px;
+        
+          
+      
+        }
+        .product{
+            width: 18%;
+            height: 270px;
+            /* background-color: brown; */
+            padding-top: 10px;
+            cursor: pointer;
+            transition: ease-in-out .3s;
+            /* margin-top: 10px; */
+        }
+
+        .product:hover{
+            transform: scale(1.02);
+            border-radius: 5px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .all-items.change .product:hover{
+            /* border: 1px solid white; */
+            box-shadow: rgb(255, 153, 0) 0px 1px 2px 0px, rgb(255, 153, 0) 0px 1px 3px 1px;
+        }
+        .product img{
+            width: 155px;
+            height: 140px;
+            margin-left: 5px;
+       
+        }
+
+        .title,.price, .discount{
+            font-family:Roboto-Regular ;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+
+        .cart{
+            display: flex;
+            justify-content: center;
+            margin-top: 18px;
+            width: 100%;
+        }
+
+        .cart button{
+            border: none;
+            background: #ff9900;
+            color: #fff;
+            padding: 6px 13px;
+            font-size: 12px;
+            width: 90%;
+            border-radius: 5px;
+            opacity: 0;
+            transition: ease-in-out .5s;
+        }
+
+        .cart button:hover{
+            background-color: #E07E1B;
+        }
+
+        .product:hover .cart button{
+            opacity: 1;
+        }
+
+        .beauty-deals{
+          height: fit-content;
+          width: 98%;
+          border-radius: 5px;
+          margin-top: 13px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+         
+        }
+        
+
+        .all-beauty-deals{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+         
+         }
+
+         .all-beauty-deals.change{
+                background-color: black;
+                color: white;
+            }
+
+         .all-beauty-deals img{
+            height: 160px;
+            border-radius: 5px 5px 0 0;
+           
+         }
+
+      
+
+         .beauty-deals-text{
+            height: 40px;
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            background-color: #def1fd;
+         }
+         .beauty-deals-text.change{
+                background-color: black;
+                color: white;
+                border-bottom: 1px solid #ff9900;
+            }
+         .beauty-deals-text p{
+            font-family:Roboto-Regular ;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;
+         }
+
+         .welcome{
+            text-transform: uppercase;
+         }
+         
+         .saved a{
+            text-decoration: none;
+            color: black;
+         }
+
+
+        .top{
+     
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #B90324;
+            font-size: 13px;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius:25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+        }
+
+        .top:hover{
+            background-color: #fff;
+            border: 1px solid #B90324;
+            color: #B90324;
+        }
+
+
+
+
+        #flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* width: 100%; */
+  min-height: 200px;
+  height: 40vh;
+  max-width: 98%;
+  /* margin: auto; */
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+    margin-top: 13px;
+   
+}
+
+#left-zone {
+  height: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#left-zone .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin: auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.item input {
+  display: none;
+}
+
+label {
+  display: block;
+  opacity: 0.5;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+
+label:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.content-test {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  height: 50%;
+  width: 100%;
+  -webkit-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.content-test p {
+  max-width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#right-zone {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 50%;
+}
+
+input:checked ~ .content-test {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  opacity: 1;
+}
+
+@media (min-width: 480px) {
+  #flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: auto;
+    height: 400px;
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #left-zone .list {
+    border-right: 2px solid #cccccc;
+  }
+
+  .content-test {
+    width: 65%;
+    height: 100%;
+    pointer-events: auto;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  #left-zone {
+    width: 35%;
+  }
+
+  #right-zone {
+    height: 100%;
+    width: 65%;
+  }
+}
+/* If the screen size is 480px or less */
+@media (max-width: 480px) {
+  .content_testimonial-1 .picto {
+    padding-top: 100px;
+  }
+  .content_testimonial-2 .picto {
+    padding-top: 100px;
+  }
+  .content_testimonial-3 .picto {
+    padding-top: 100px;
+  }
+  .content_testimonial-4 .picto {
+    padding-top: 100px;
+  }
+  .item > label {
+    font-size: 1.3rem;
+  }
+}
+
+.content_testimonial-1 .picto {
+  height: 130px;
+  width: 130px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/generic_300x240.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content_testimonial-1 h1 {
+  color: #d64541;
+  text-align: center;
+  cursor: pointer;
+}
+
+.content_testimonial-2 .picto {
+  height: 130px;
+  width: 130px;
+  background-image: url("https://ng.jumia.is/cms/0-6-anniversary/2023/Brand-day/30-Nivea/generic_300x240.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content_testimonial-2 h1 {
+  color: #f5d76e;
+  cursor: pointer;
+}
+
+.content_testimonial-3 .picto {
+  height: 130px;
+  width: 130px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/phones-tablets_300x240.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content_testimonial-3 h1 {
+  color: #00b16a;
+  cursor: pointer;
+}
+
+.content_testimonial-4 .picto {
+  height: 130px;
+  width: 130px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/groceries_300x240v2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content_testimonial-4 h1 {
+  color: #f27935;
+  cursor: pointer;
+}
+
+.content-test h1:first-letter {
+  text-transform: uppercase;
+}
+
+input:checked ~ label {
+  opacity: 1;
+  -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+input:checked ~ label.label_testimonial-1 {
+  color: #d64541;
+  border-right: solid 4px #d64541;
+}
+
+input:checked ~ label.label_testimonial-2 {
+  color: #f5d76e;
+  border-right: solid 4px #f5d76e;
+}
+
+input:checked ~ label.label_testimonial-3 {
+  color: #00b16a;
+  border-right: solid 4px #00b16a;
+}
+
+input:checked ~ label.label_testimonial-4 {
+  color: #f27935;
+  border-right: solid 4px #f27935;
+}
+
+label.label_testimonial-1:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/generic_300x240.jpg");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+label.label_testimonial-2:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("https://ng.jumia.is/cms/0-6-anniversary/2023/Brand-day/30-Nivea/generic_300x240.jpg");
+  background-position: center;
+  background-size: 75% 75%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+label.label_testimonial-3:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/phones-tablets_300x240.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+label.label_testimonial-4:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("https://ng.jumia.is/cms/0-1-homepage/0-0-freelinks-gray/300x240/groceries_300x240v2.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+label:first-letter {
+  text-transform: uppercase;
+}
+
+.label_testimonial-1:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#d64541a3)
+  );
+  background-image: -webkit-linear-gradient(left, #ffffff, #d64541a3);
+  background-image: -o-linear-gradient(left, #ffffff, #d64541a3);
+  background-image: linear-gradient(to right, #ffffff, #d64541a3);
+  font-size: 1.2rem;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+
+.label_testimonial-2:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#f5d76e59)
+  );
+  background-image: -webkit-linear-gradient(left, #ffffff, #f5d76e59);
+  background-image: -o-linear-gradient(left, #ffffff, #f5d76e59);
+  background-image: linear-gradient(to right, #ffffff, #f5d76e59);
+  font-size: 1.2rem;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+
+.label_testimonial-3:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#00b16aa3)
+  );
+  background-image: -webkit-linear-gradient(left, #ffffff, #00b16aa3);
+  background-image: -o-linear-gradient(left, #ffffff, #00b16aa3);
+  background-image: linear-gradient(to right, #ffffff, #00b16aa3);
+  font-size: 1.2rem;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+
+.label_testimonial-4:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffffff),
+    to(#f27935a3)
+  );
+  background-image: -webkit-linear-gradient(left, #ffffff, #f27935a3);
+  background-image: -o-linear-gradient(left, #ffffff, #f27935a3);
+  background-image: linear-gradient(to right, #ffffff, #f27935a3);
+  font-size: 1.2rem;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+
+
+
+.card {
+    width: 180px;
+    height: 220px;
+    perspective: 800px;
+    cursor: pointer;
+}
+
+.card__inner {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+
+.card__body {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card__body--front {
+    background-color: #fff;
+    font-family:Roboto-Regular ;
+    font-size: 14px;
+    color: #B90324;
+}
+
+.card__body--back {
+    transform: rotateY(180deg);
+    background-color: #B90324;
+    color: #fff;
+    font-family:Roboto-Regular ;
+    font-size: 14px;
+}
+.card__title img{
+    width: 178px;
+}
+.back-discount{
+    margin-top: -17px;
+}
+
+.carol-btn .nxt{
+    background-color: #00000062;
+    /* color: #fff !important; */
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 5px !important;
+} -->
+
+
+
+
+
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header-one"> 
+            <img src="./JA-xiaomi-brands-top-strip.gif" alt="">
+    
+        
+        </div>
+      
+
+        <div class="header-two">
+            <div class="side-one">
+                <img src="star.png" alt="">
+                <a href="">Sell on Jumia</a>
+            </div>
+            <div class="side-two">
+               <a href="">  <img src="jumia.png" alt=""> </a> 
+               <a href=""> <img src="jumiapay.png" alt=""> </a> 
+               <a href=""> <img src="jumiafood.png" alt=""> </a> 
+               <a href=""> <img src="jumiaparty.png" alt=""> </a> 
+               <a href=""> <img src="jumialog.png" alt=""> </a>
+               
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="green" onclick="move()" id="green"><div class="white" id="wh"></div></div> 
+        <div class="first-nav">
+            <img src="Jumia-Logo.png" alt="hi">
+        </div>
+
+        <div class="second-nav">
+
+
+            <div class="first">
+                <i class="fa-solid fa-magnifying-glass" style="color: #adadad;"></i>
+                <input type="text" placeholder="Search products, brands and categories" id="inp">
+                <button onclick="searchBar(inp)"> SEARCH</button>
+            </div>
+
+
+            <div class="second">
+                
+                <button id="acct">
+                </button>
+                
+                <div class="second-content">
+                    <div class="sign-in" id="signIn"></div>
+  
+                </div>
+                
+            </div>
+            <div class="third">
+              
+                 <button>
+                    <i class="fa-regular fa-circle-question" style="color: #000000;"></i>
+                    Help
+                    <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+                </button>
+                
+                <div class="third-content">
+                   <div class="help"> Help Center</div>
+                   <div class="track"> Place & track order</div>
+                   <div class="cancel"> Order cancellation</div>
+                   <div class="return"> Returns & Refunds</div>
+                   <div class="payment"> Payment & Jumia account </div>
+                   <div class="live-chat"> <button> LIVE CHAT</button></div>
+                </div>
+              
+               
+            </div>
+            <div class="forth">
+              
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>   <div> Cart</div> 
+                    <span id="showCart"></span>
+                </a>
+            </div>
+        </div>
+        <div class="animation" id="animation"> <p>You've successfully added this item to the cart</p> </div>
+    </nav>
+
+    <main>
+            <div class="main-all">
+                    <div class="all-section">
+                       <div class="left-section">
+                            <div class="left-section-all">
+                                <p onclick="category('Grocery')"> <i class="fa-solid fa-apple-whole icon" style="color: #000000;"></i> <span> Supermarket</span></p>
+                                <p onclick="category('Health & beauty')"> <i class="fa-solid fa-spray-can-sparkles icon" style="color: #000000;"></i><span> Health & Beauty</span></p>
+                                <p onclick="category('Home & office')"> <i class="fa-solid fa-house icon" style="color: #000000;"></i> <span> Home & Office</span></p>
+                                <p onclick="category('Appliances')"> <i class="fa-solid fa-kitchen-set icon" style="color: #000000;"></i> <span> Appliances</span></p>
+                                <p onclick="category('Smartphone')"> <i class="fa-solid fa-mobile-screen-button icon" style="color: #000000;"></i> <span> Phones & Tablets</span></p>
+                                <p onclick="category('Computing')"> <i class="fa-solid fa-computer icon" style="color: #000000;"></i><span> Computing</span></p>
+                                <p onclick="category('Electronics')"> <i class="fa-solid fa-tv icon" style="color: #000000;"></i> <span> Electronics</span></p>
+                                <p onclick="category('Fashion')"> <i class="fa-solid fa-shirt icon" style="color: #000000;"></i><span> Fashion</span></p>
+                                <p onclick="category('Baby products')"> <i class="fa-solid fa-baby icon" style="color: #000000;"></i> <span> Baby Products</span></p>
+                                <p onclick="category('Gaming')"> <i class="fa-solid fa-gamepad icon" style="color: #000000;"></i> <span class="gaming"> Gaming</span></p>
+                                <p onclick="category('Sporting')"> <i class="fa-solid fa-dumbbell icon" style="color: #000000;"></i><span> Sporting Goods</span></p>
+                                <p onclick="category('other')"> <i class="fa-solid fa-chalkboard icon" style="color: #000000;"></i><span> Other category</span></p>
+                            </div>
+                        </div>
+
+                    <div class="middle-section">
+                          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" data-bs-interval="3000">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1689080732/contentservice/Cook.jpg_Hy-omRct2.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="1000">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1689080732/contentservice/Groceries.jpg_B1foQC5F2.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1689080729/contentservice/Beauty.jpg_B1gjXR9K2.jpg" class="d-block w-100" alt="...">
+                              </div>
+                             <div class="carousel-item">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1686914588/contentservice/samz.jpg_BJzmLTtPn.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1689083332/contentservice/Phone.jpg_B1hTTC5K3.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/v1689080731/contentservice/Electronics.jpg_H1xiQ0qtn.jpg" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev carol-btn" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon nxt" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next carol-btn" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                              <span class="carousel-control-next-icon nxt" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+
+
+
+                    </div>
+
+                       <div class="right-section">
+                            <div> <img src="./JA-live-now-Countdown.gif" alt=""></div>
+                            <div> <img src="JForce.png" alt=""></div>
+                       </div>
+                    </div>
+
+
+
+                   
+                    <div id="flex-container" class="testimonials">
+                     
+                        <div id="left-zone">
+                          <ul class="list">
+                            <li class="item">
+                              <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
+                              <label class="label_testimonial-1" for="radio_testimonial-1">Computing Deals</label>
+                              <div class="content-test content_testimonial-1" >
+                                <span class="picto" onclick="category('Computing')"></span>
+                                <h1 onclick="category('Computing')">Computing Deals</h1>
+                                <p onclick="category('Computing')">We have an amazing collection of top computing brands like Hp, Dell, Lenovo, Microsoft, Apple Macbook, and more! You can either buy these computing devices as desktops or laptops depending on your choice with massive discount</p>
+                            </div>
+                            </li>
+                            <li class="item">
+                              <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
+                              <label class="label_testimonial-2" for="radio_testimonial-2">Health & Beauty</label>
+                              <div class="content-test content_testimonial-2">
+                                <span class="picto" onclick="category('Health & beauty')"></span>
+                                <h1 onclick="category('Health & beauty')">Health & Beauty</h1>
+                                <p onclick="category('Health & beauty')">Our online store also offers you the best beauty products from top brands in the world, e.g. Nivea and many others. Many things related to health and beauty e.g. skin care products, makeup and cosmetics, wigs, oral care, hair care, and fragrances can be found at our online store.</p>
+                              </div>
+                            </li>
+                            <li class="item">
+                              <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
+                              <label class="label_testimonial-3" for="radio_testimonial-3">Phones & Tablets</label>
+                              <div class="content-test content_testimonial-3">
+                                <span class="picto" onclick="category('Smartphone')"></span>
+                                <h1 onclick="category('Smartphone')">Phones & Tablets</h1>
+                                <p onclick="category('Smartphone')">Shopping with guarantees that you get the latest mobile phones, tablets, or phablets before anyone else. Buy trusted Apple iOS iPhones and iPads and quality Android brands like Samsung, Tecno, Xiaomi, Infinix, and many others!</p>
+                              </div>
+                            </li>
+                            <li class="item">
+                              <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
+                              <label class="label_testimonial-4" for="radio_testimonial-4">Groceries</label>
+                              <div class="content-test content_testimonial-4">
+                                <span class="picto" onclick="category('Grocery')"></span>
+                                <h1 onclick="category('Grocery')">Groceries</h1>
+                                <p onclick="category('Grocery')">Shop for your daily groceries at prices cheaper than others. Check off your grocery list and stock up your pantry with a variety of items ranging from rice to cooking oils, wines, Snacks, beverages, household cleaning items, and many others.</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="right-zone"></div>
+                      </div>
+
+                    <div class="all-items" id="bdy">
+                        <div class="ann-deals" id="ann">Top Anniversary Deals</div>
+                        <div id="display" class="test"></div>
+                    </div>
+                    
+                      <div class="beauty-deals">
+                        <div class="beauty-deals-text" id="beautyText">
+                            <p> Pick For You</p>
+                        </div>
+                        <div class="all-beauty-deals" id="newBdy2">
+            
+                        </div>
+                      </div>
+
+                      <div class="beauty-deals">
+                        <div class="beauty-deals-text" id="beautyText2">
+                            <p> Computing Deals</p>
+                        </div>
+                        <div class="all-beauty-deals" id="newBdy">
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/hp-laptops_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/printers_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/gaming-laptop_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/accessories_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/lenovo-laptops_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/external-hd_300x400.png" alt=""></div>
+                        </div>
+                      </div>
+                    <!-- </div> -->
+            </div>
+
+            <button class="position-fixed bottom-0 end-0 translate-middle d-none top" onclick="scrollToTop()" id="back-to-up">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+      
+    </main>
+   
+
+
+   <script src="all.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+
+
+
+    let display = document.getElementById("display")
+    let white = document.getElementById("wh")
+    let green = document.getElementById("green")
+    let bdy = document.getElementById("bdy")
+    let newBdy = document.getElementById("newBdy")
+    let newBdy2 = document.getElementById("newBdy2")
+    let ann = document.getElementById("ann")
+    let beautyText = document.getElementById("beautyText")
+    let beautyText2 = document.getElementById("beautyText2")
+
+
+    let acct = document.getElementById("acct")
+    let sign_in = document.getElementById("signIn")
+    let loggedUser = JSON.parse(localStorage.getItem("loginUser"))
+    if (loggedUser != null){
+        acct.innerHTML = `<div class="welcome"> HI ${loggedUser.name} </div>`
+        sign_in.innerHTML = `
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+        <div class="order" > <a href="order.html"><i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></a></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        <button onclick="logout()">LOG OUT</button>
+        `
+    }
+    else{
+        acct.innerHTML = `
+        <i class="fa-regular fa-user" style="color: #000000;"></i>
+        Account
+        <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+        `
+        sign_in.innerHTML = `
+        <button onclick="signin()">SIGN IN</button>
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+         <div class="order"> <i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></div>
+         <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        `
+    }
+    let newShop = JSON.parse(localStorage.getItem("newshop"))
+    let pickYou = newShop.filter((e) => e.category == "pick")
+    for (i=0; i < pickYou.length; i++){
+        newBdy2.innerHTML += `
+        <div onclick="showPick(${pickYou[i].id})">
+
+            
+       
+
+<article class="card">
+        <div class="card__inner">
+        <div class="card__body card__body--front">
+            <h2 class="card__title">
+            <img src=${pickYou[i].thumbnail}></h2>
+            <p class="text-truncate"> ${pickYou[i].title}</p>
+        </div>
+        <div class="card__body card__body--back">
+            <h2 class="card__title">
+            <img src=${pickYou[i].image[1]}>
+            </h2>
+            <p>${pickYou[i].price}</p>
+            <p class="back-discount"><span>Discount:</span>  ${pickYou[i].discount}%</p>
+        </div>
+    </div>
+</article>
+        </div>
+
+        `
+    }
+    
+    function showPick(id){
+        localStorage.setItem("productId", id)
+        window.location.href = "product.html"   
+    }
+
+    function move(){
+        green.classList.toggle("slide")
+        bdy.classList.toggle("change")
+        newBdy.classList.toggle("change")
+        newBdy2.classList.toggle("change")
+        ann.classList.toggle("change")
+        beautyText.classList.toggle("change")
+        beautyText2.classList.toggle("change")
+    }
+     fetch("http://localhost:1234/product")
+     .then( (shopping) => shopping.json())
+   
+    .then((shop) => {
+        localStorage.setItem("newshop" , JSON.stringify(shop))
+    
+        for (i = 0; i < shop.length; i ++){
+            if (i == 30){
+                break
+            }
+            else{
+                let id = shop[i].id
+            display.innerHTML += ` <div class="product" > 
+                <div>
+                    <div onclick="showProduct(${id})" id="${id}">       
+                        <div>  <img src="${shop[i].thumbnail}"></div>
+                        <div class="title text-truncate">   ${shop[i].title}</div>
+                        <div class="price"> ${shop[i].price} </div>
+                        <div class="discount">  <span>Discount:</span> ${shop[i].discount}%</div></div>
+
+
+                    <div> 
+                         <div class="cart" onclick=addCart(${id})> <button> ADD TO CART </button> </div>
+                    </div>
+                </div>
+             
+               
+            </div> `
+            }
+        }
+    })
+
+    function showProduct(id){
+        localStorage.setItem("productId", id)
+        window.location.href = "product.html"   
+    }
+
+    function category(val){
+        localStorage.setItem("categories", val)
+        window.location.href = "category.html"
+    }
+
+    function signin(){
+        window.location.href = "signin-signup.html"
+    }
+
+    function logout(){
+        localStorage.removeItem("loginUser")
+        window.location.href = "index.html"
+    }
+
+    let animation = document.getElementById("animation")
+    function addCart(id){
+        let search = newShop.find((e) => e.id == id)
+        search.qty = 1
+        search.stock -= 1
+        fetch("http://localhost:1234/cart", {
+            headers:{
+                "Content-type": "application/json"
+            },
+            method: "POST",
+            body: JSON.stringify(search)
+        }).then((res)=> res.json())
+        .then((data)=>{
+            animation.style.display = "block"
+            setTimeout(() =>{
+            window.location.href = "cart.html"
+            }, 1300)
+            fetchCart()
+        }).catch((err)=>{
+            alert("You've added this item already")
+            window.location.href = "cart.html"
+           
+        })
+       
+    }
+
+    let showCart = document.getElementById("showCart")
+    function fetchCart(){
+        fetch("http://localhost:1234/cart")
+        .then((res)=>res.json())
+        .then((data)=>{
+            cart = data;
+            showCart.innerHTML = cart.length == 0 ? null : cart.length
+            if (showCart.innerHTML == ""){
+                showCart.style.padding = "0"
+            }
+        })
+    }
+    fetchCart()
+
+
+    window.onscroll = () => {
+  toggleTopButton();
+}
+function scrollToTop(){
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleTopButton() {
+  if (document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20) {
+    document.getElementById('back-to-up').classList.remove('d-none');
+  } else {
+    document.getElementById('back-to-up').classList.add('d-none');
+  }
+}
+
+</script>
+
+<script>
+    // Makeshift carousel function that gets invoked with the Index to start it off, then the callback increments the index to recursively invoke the same function. Works even in IE11!
+var testimonialItems = document.querySelectorAll(".item label");
+var timer;
+function cycleTestimonials(index) {
+   timer = setTimeout(function() {
+    var evt;
+    if (document.createEvent){
+      //If browser = IE, then polyfill
+      evt = document.createEvent('MouseEvent');
+      evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    } else {
+      //If Browser = modern, then create new MouseEvent
+      evt = new MouseEvent("click", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+            clientX: 20
+          });
+    }
+    var ele = "." + testimonialItems[index].className;
+    var ele2 = document.querySelector(ele)
+    ele2.dispatchEvent(evt);
+    index++; // Increment the index
+    if (index >= testimonialItems.length) {
+      index = 0; // Set it back to `0` when it reaches `3`
+    }
+    cycleTestimonials(index); // recursively call `cycleTestimonials()`
+    document.querySelector(".testimonials").addEventListener("click", function() {
+      clearTimeout(timer); //stop the carousel when someone clicks on the div
+    });
+  }, 2000); //adjust scroll speed in miliseconds
+}
+//run the function
+cycleTestimonials(0);
+function searchBar(inp){
+  localStorage.setItem("searchItem", inp.value)
+  window.location.href = "searchresult.html"
+}
+
+function  order(){
+  window.location.href = "order.html"
+}
+</script>

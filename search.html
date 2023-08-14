@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searcht</title>
+</head>
+<body>
+    <div id="search"></div>
+</body>
+<script>
+    let userInp = localStorage.getItem("searchItem").toLowerCase()
+    let sear = document.getElementById("search")
+    let allProduct = JSON.parse(localStorage.getItem("newshop"))
+
+    let find = allProduct.filter((e) => e.title.toLowerCase().includes(userInp) || e.category.toLowerCase().includes(userInp))
+    
+    if (find){
+        for (i=0; i < find.length; i++){
+        sear.innerHTML += `
+       <div onclick="showProduct(${find[i].id})">
+        <p>${find[i].title}</p>
+        </div>
+        `
+        }
+    }
+    if (find.length == 0){
+        alert("hey")
+    }
+
+    function showProduct(id){
+        localStorage.setItem("productId", id)
+        window.location.href = "product.html"   
+    }
+</script>
+</html>

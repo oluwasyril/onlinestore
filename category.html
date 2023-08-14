@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>category</title>
+    <link rel="icon" href="star.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        @font-face {
+            font-family:Roboto-Regular ;
+            src: url(Roboto/Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Light ;
+            src: url(Roboto/Roboto-Light.ttf);
+        }
+
+        button{
+            cursor: pointer;
+        }
+        .green{
+            background-color: #ff9900;
+            height: 30px;
+            width: 70px;
+            border-radius: 40px;
+            /* margin-top: 30px; */
+            position: absolute;
+            right: 2%;
+        }
+        .green.slide{
+            background-color: rgb(196, 221, 244);
+        }
+        .white{
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            position: absolute;
+            left: 10%;
+            top: 16%;
+            transition: .3s ease;
+        }
+        .green.slide .white{
+            left: 60%;
+            background-color: #ff9900;
+        }
+
+        header{
+            height: 70px;
+            width: 100%;
+            background-color: #f1f1f2;
+            }
+
+            .header-one{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ff9900;
+            }
+
+            .header-one img{
+                height: 40px;
+                
+            }
+
+            .header-two{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 85%;
+            }
+
+            .side-one{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .side-one a{
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .side-one a:hover{
+                text-decoration: underline;
+            }
+
+            .side-one img{
+                height: 10px;
+               
+            }
+
+            /* .side-two{
+                display: flex;
+                align-items: center;
+            } */
+
+            .side-two a{
+                text-decoration: none;
+            }
+
+            .side-two img{
+                height: 18px;
+                padding: 3px;
+            }
+
+            .side-two img:hover{
+                filter: invert(71%) sepia(13%) saturate(6556%) hue-rotate(328deg) brightness(98%) contrast(97%);
+    
+            }
+        
+
+            nav{
+                height: 52px;
+                width: 100%;
+                background-color: #ffffff;
+                display: flex;
+                gap: 50px;
+                justify-content: center;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                z-index: 20;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+
+
+            .first-nav{
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 40px;
+                
+              
+            }
+
+
+            #newMenu{
+            position: relative;
+            padding: 30px;
+        }
+        .newMenu-content{
+            position: absolute;
+            background-color: #fff;
+            height:fit-content;
+            width: 130px;
+            border-radius: 5px;
+            top: 55px;
+            padding: 8px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            display: none;
+        }
+
+        .newMenu-content::before{
+            content: "";
+            position: absolute;
+            background-color: #ffffff;
+            height: 11px;
+            width: 11px;
+            top: -4px;
+            left: 3px;
+            transform: rotate(45deg);
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            z-index: -1;
+        }
+
+
+        .newMenu-content p{
+              
+              margin-top: -10px;
+              cursor: pointer;
+            
+          }
+
+          .newMenu-content p:nth-child(1){
+            margin-top: 1px;
+          }
+          .newMenu-content p:hover .icon{
+              color:#ff9900 !important;
+          }
+
+          .newMenu-content p:hover{
+              color:#ff9900
+          }
+
+          .newMenu-content span{
+              font-family:Roboto-Light ;
+              font-size: 11px;
+              margin-left: 5px;
+           
+          }
+
+          .icon{
+              font-size: 15px;
+  
+          }
+
+          .fa-house, .fa-kitchen-set{
+              margin-left: -3px;
+          }
+
+          .fa-mobile-screen-button{
+              margin: 1px;
+          }
+
+          .fa-computer, .fa-tv, .fa-shirt, .fa-gamepad, .fa-dumbbell,.fa-chalkboard{
+              margin-left: -4px;
+          }
+
+
+
+
+            .first-nav img{
+                    height: 50px;
+                    margin-left: 30px;
+            }
+
+            .second-nav{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 60%;
+                
+            }
+            .first{
+                display: flex;
+                align-items: center;
+                width: 60%;
+            }
+            .first input{
+                width: 100%;
+                padding: 8px 30px;
+                border-radius:4px;
+                outline: none;
+                border: 1px solid gray;
+            }
+            .fa-magnifying-glass{
+                margin-right: -24px;
+                z-index: 10;
+            }
+
+            .first button{
+                margin-left: 5px;
+                padding: 9px 13px;
+                border-radius:4px;
+                border: none;
+                background-color: #ff9900;
+                color: #fff;
+            }
+
+            .first button:hover{
+                background-color: #E07E1B;
+            }
+
+            .second{
+                position: relative;
+                font-size: 13px;
+            }
+
+            .second button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+            .second button:hover{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-user{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+            .fa-user{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        
+          .fa-angle-down{
+            margin-left: 5px;
+          }
+
+          .second button:focus{
+            background-color: #00000038;
+           
+          }
+
+            .second-content{
+                position: absolute;
+                top: 38px;
+                left: -30px;
+                width: 160px;
+                height: 168px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .second:focus-within .second-content{
+                display: block;
+            }
+
+            .sign-in{
+                padding: 12px;
+                border-bottom: 1px solid #f1f1f2;
+            }
+
+            .sign-in button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 8px 20px;
+            }
+
+            .sign-in button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+            .my-account, .order, .saved{
+                padding: 8px;
+                font-family:Roboto-Light ;
+                font-size: 13px;
+
+            }
+
+            .my-account:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .order:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .saved:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+
+
+            .account-text, .saved-text{
+                margin-left: 13px;
+                cursor: pointer;
+            }
+            .order-text{
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+            }
+
+            .fa-angle-down{
+                font-size: 10px;
+            }
+
+
+
+            .third{
+                position: relative;
+            }
+
+            .third-content{
+                position: absolute;
+                top: 35px;
+                left: -50px;
+                width: 160px;
+                height: 200px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .third:focus-within .third-content{
+                display: block;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+
+            .third button:focus{
+            background-color: #00000038;
+           
+          }
+
+
+            .third button:hover{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-circle-question{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+
+
+            .fa-circle-question{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+         
+
+            .live-chat{
+                padding: 12px;
+                border-top: 1px solid #f1f1f2;
+            }
+
+            .live-chat button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 6px 20px;
+                border-radius: 4px;
+            }
+
+             .live-chat button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+
+            .help,.track,.cancel,.return,.payment{
+                padding: 6px;
+                font-family:Roboto-Light ;
+                font-size: 11px;
+                cursor: pointer;
+                }
+
+
+                .help:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .track:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .cancel:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .return:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .payment:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+
+            .forth a{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                text-decoration: none;
+                color: #000000;
+                position: relative;
+                display: flex;
+                gap: 4px;
+               
+            }
+
+
+            #showCart{
+                position: absolute;
+                left: 5px;
+                top:-8px;
+                padding: 1px 5px;
+                background-color: #ff9900;
+                font-family:Roboto-Regular ;
+                font-size: 8px;
+                color: #fff;
+                border-radius: 10px;
+            }
+            .forth a:hover{
+                color: #ff9900 !important;
+            }
+
+            .forth a:hover .fa-cart-shopping{
+                color: #ff9900 !important;
+            }
+
+            main{
+                 height: fit-content;
+                /* height: fit-content; */
+                padding-bottom:20px ;
+                width:100%;
+                background-size: 1400px;
+                background-position-x: 30%;
+            }
+
+
+            .main-all{
+                margin: auto;
+                height: 50vh;
+                width: 80%;
+                border-radius: 5px;
+            }
+
+            .all-items{
+          height: fit-content;
+          background-color: #fff;
+          width: 98%;
+          border-radius: 5px;
+          margin-top: 30px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .all-items.change{
+                background-color: black;
+                color: white;
+            }
+
+            .ann-deals{
+                height: 40px;
+                width: 100%;
+                background-color: #fee2cc;
+                padding: 7px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                font-family:Roboto-Regular ;
+                font-size: 18px;
+            }
+
+            .ann-deals.change{
+                background-color: black;
+                color: white;
+                border-bottom: 1px solid #ff9900;
+            }
+
+            .product{
+            width: 18%;
+            height: 240px;
+            padding-top: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: ease-in-out .3s;
+            margin-left: 5px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+        }
+
+        .product:hover{
+            transform: scale(1.01);
+            border-radius: 5px;
+        }
+        .all-items.change .product{
+          
+            box-shadow: rgb(255, 153, 0) 0px 1px 2px 0px, rgb(255, 153, 0) 0px 1px 3px 1px;
+        }
+
+     
+        .product-img{
+            width: 160px;
+            height:170px;
+             margin-left: 5px;
+            /* margin-top: 18px; */
+       
+        }
+
+        .product:hover .product-img{
+            height: 140px;
+            margin-left: 5px;
+            margin-top: 17px;
+        }
+
+        .product-show{
+            position: absolute;
+               background-color: #0f0f0f23;
+               height: 100%;
+               width: 100%;
+               bottom: -400px;
+               transition: .3s;
+            }
+
+            .product:hover .product-show{
+                bottom: 0;
+                
+            }
+        .price, .discount{
+            font-family:Roboto-Regular ;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+
+        .title{
+            font-family:Roboto-Regular ;
+            font-size: 13.8px;
+            margin-left: 5px;
+        }
+
+        .discount{
+                height: 20px;
+                width: 30px;
+               /* padding-left: 4px; */
+               padding:3px 0 0 4px ;
+                background-color: #FEF3E9;
+                font-family:Roboto-Light ;
+                font-size: 10px;
+                color: #f68b1f;
+                position: absolute;
+                top: 4px;
+                right: 4px;
+            }
+
+
+            .fa-star-half-stroke, .fa-star{
+                font-size: 10px;
+            }
+
+            .rating{
+                position: absolute;
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                margin-left: 5px;
+                top: 84%;
+            }
+
+          
+
+            .test{
+            /* margin-top: 10px; */
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          flex-wrap: wrap;
+          gap: 15px;
+          padding: 20px;
+        
+          
+      
+        }
+  
+      
+   
+    
+
+
+        .beauty-deals{
+          height: fit-content;
+          width: 98%;
+          border-radius: 5px;
+          margin-top: 13px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+         
+        }
+        
+
+        .all-beauty-deals{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+         }
+
+         .all-beauty-deals.change{
+                background-color: black;
+                color: white;
+            }
+
+         .all-beauty-deals img{
+            height: 190px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .5sec ease-in-out;
+         }
+
+         .all-beauty-deals img:hover{
+            transform: scale(1.02);
+         }
+
+         .beauty-deals-text{
+            height: 40px;
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            background-color: #def1fd;
+         }
+         .beauty-deals-text.change{
+                background-color: black;
+                color: white;
+                border-bottom: 1px solid #ff9900;
+            }
+         .beauty-deals-text p{
+            font-family:Roboto-Regular ;
+            font-size: 16px;
+            text-align: center;
+            padding: 8px;
+         }
+
+         .welcome{
+            text-transform: uppercase;
+         }
+
+         .saved a{
+            text-decoration: none;
+            color: black;
+         }
+
+         .order a{
+                text-decoration: none!important;
+                color: #000000;
+              }
+
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header-one"> 
+            <img src="./JA-xiaomi-brands-top-strip.gif" alt="">
+    
+        
+        </div>
+
+        <div class="header-two">
+            <div class="side-one">
+                <img src="star.png" alt="">
+                <a href="">Sell on Jumia</a>
+            </div>
+            <div class="side-two">
+               <a href="">  <img src="jumia.png" alt=""> </a> 
+               <a href=""> <img src="jumiapay.png" alt=""> </a> 
+               <a href=""> <img src="jumiafood.png" alt=""> </a> 
+               <a href=""> <img src="jumiaparty.png" alt=""> </a> 
+                <a href=""> <img src="jumialog.png" alt=""> </a>
+
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="green" onclick="move()" id="green"><div class="white" id="wh"></div></div> 
+
+
+
+        <div class="first-nav">
+            <div id="newMenu" onmouseover="newMenu()" onmouseout="offMenu()"><i class="fa-solid fa-bars" ></i>
+                <div class="newMenu-content" id="Menu">
+
+                    <p onclick="category('Grocery')"> <i class="fa-solid fa-apple-whole icon" style="color: #000000;"></i> <span> Supermarket</span></p>
+                    <p onclick="category('Health & beauty')"> <i class="fa-solid fa-spray-can-sparkles icon" style="color: #000000;"></i><span> Health & Beauty</span></p>
+                    <p onclick="category('Home & office')"> <i class="fa-solid fa-house icon" style="color: #000000;"></i> <span> Home & Office</span></p>
+                    <p onclick="category('Appliances')"> <i class="fa-solid fa-kitchen-set icon" style="color: #000000;"></i> <span> Appliances</span></p>
+                    <p onclick="category('Smartphone')"> <i class="fa-solid fa-mobile-screen-button icon" style="color: #000000;"></i> <span> Phones & Tablets</span></p>
+                    <p onclick="category('Computing')"> <i class="fa-solid fa-computer icon" style="color: #000000;"></i><span> Computing</span></p>
+                    <p onclick="category('Electronics')"> <i class="fa-solid fa-tv icon" style="color: #000000;"></i> <span> Electronics</span></p>
+                    <p onclick="category('Fashion')"> <i class="fa-solid fa-shirt icon" style="color: #000000;"></i><span> Fashion</span></p>
+                    <p onclick="category('Baby products')"> <i class="fa-solid fa-baby icon" style="color: #000000;"></i> <span> Baby Products</span></p>
+                    <p onclick="category('Gaming')"> <i class="fa-solid fa-gamepad icon" style="color: #000000;"></i> <span class="gaming"> Gaming</span></p>
+                    <p onclick="category('Sporting')"> <i class="fa-solid fa-dumbbell icon" style="color: #000000;"></i><span> Sporting Goods</span></p>
+                    <p onclick="category('other')"> <i class="fa-solid fa-chalkboard icon" style="color: #000000;"></i><span> Other category</span></p>
+
+                </div>
+            </div>
+
+            <div class="home-images"> 
+                 <a href="index.html"> <img src="Jumia-Logo.png" alt=""></a> 
+            </div>
+        </div>
+
+
+
+
+        <div class="second-nav">
+
+
+            <div class="first">
+                <i class="fa-solid fa-magnifying-glass" style="color: #adadad;"></i>
+                <input type="text" placeholder="Search products, brands and categories" id="inp">
+                <button onclick="searchBar(inp)"> SEARCH</button>
+            </div>
+
+
+      
+            <div class="second">
+                
+                <button id="acct">
+                </button>
+                
+                <div class="second-content">
+                    <div class="sign-in" id="signIn"></div>
+                   
+                </div>
+                
+            </div>
+            <div class="third">
+              
+                 <button>
+                    <i class="fa-regular fa-circle-question" style="color: #000000;"></i>
+                    Help
+                    <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+                </button>
+                
+                <div class="third-content">
+                   <div class="help"> Help Center</div>
+                   <div class="track"> Place & track order</div>
+                   <div class="cancel"> Order cancellation</div>
+                   <div class="return"> Retruns & Refunds</div>
+                   <div class="payment"> Payment & Jumia account </div>
+                   <div class="live-chat"> <button> LIVE CHAT</button></div>
+                </div>
+              
+               
+            </div>
+            <div class="forth">
+              
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>   <div>Cart</div> 
+                    <span id="showCart"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+            <div class="main-all">
+
+
+                    <div class="all-items" id="bdy">
+                        <div class="ann-deals" id="ann">Top Anniversary Deals</div>
+                        <div id="display" class="test"></div>
+                    </div>
+                    
+                      <div class="beauty-deals">
+                        <div class="beauty-deals-text" id="beautyText">
+                            <p> Beauty Deals</p>
+                        </div>
+                        <div class="all-beauty-deals" id="newBdy2">
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/skin-care_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/hair-clippers_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/makeup_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/fragrances_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/wigs_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/health-beauty/300x400/oral-care_300x400.png" alt=""></div>
+                        </div>
+                      </div>
+
+                      <div class="beauty-deals">
+                        <div class="beauty-deals-text" id="beautyText2">
+                            <p> Computing Deals</p>
+                        </div>
+                        <div class="all-beauty-deals" id="newBdy">
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/hp-laptops_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/printers_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/gaming-laptop_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/accessories_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/laptops/lenovo-laptops_300x400.png" alt=""></div>
+                            <div> <img src="https://ng.jumia.is/cms/0-1-category-pages/computing/other-computers-accessories/external-hd_300x400.png" alt=""></div>
+                        </div>
+                      </div>
+                
+            </div>
+    </main>
+   
+
+
+   <script src="all.js"></script>
+</body>
+</html>
+
+<script>
+    let display = document.getElementById("display")
+    let white = document.getElementById("wh")
+    let green = document.getElementById("green")
+    let bdy = document.getElementById("bdy")
+    let newBdy = document.getElementById("newBdy")
+    let newBdy2 = document.getElementById("newBdy2")
+    let ann = document.getElementById("ann")
+    let beautyText = document.getElementById("beautyText")
+    let beautyText2 = document.getElementById("beautyText2")
+    let categories = localStorage.getItem("categories")
+    let allProduct = JSON.parse(localStorage.getItem("newshop"))
+
+
+    let acct = document.getElementById("acct")
+    let sign_in = document.getElementById("signIn")
+    let loggedUser = JSON.parse(localStorage.getItem("loginUser"))
+    if (loggedUser != null){
+        acct.innerHTML = `<div class="welcome"> HI ${loggedUser.name} </div>`
+        sign_in.innerHTML = `
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+        <div class="order" > <a href="order.html"><i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></a></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i>  <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        <button onclick="logout()">LOG OUT</button>
+        `
+    }
+    else{
+        acct.innerHTML = `
+        <i class="fa-regular fa-user" style="color: #000000;"></i>
+        Account
+        <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+        `
+        sign_in.innerHTML = `
+        <button onclick="signin()">SIGN IN</button>
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+        <div class="order"> <i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        `
+    }
+
+    let found = allProduct.filter((e) => e.category == categories)
+
+    ann.innerHTML = `
+        ${found[0].category}
+        
+    `
+
+    for (i = 0; i < found.length; i++){
+        id = found[i].id
+        display.innerHTML += `<div class="product" onclick="showProduct(${id})">
+            <div> <img src=${found[i].thumbnail} class="product-img"></div>
+            <div class="title text-truncate">${found[i].title}</div>
+            <div class="price"> ${found[i].price} </div>
+            <div class="product-show">
+                <div class="discount">- ${found[i].discount}% </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+                    <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+                    <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+                    <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+                    <i class="fa-regular fa-star-half-stroke" style="color: #f6b01f;"></i>
+                    <span class="right-text">(${found[i].rating}) </span>
+                </div>
+            </div>
+           
+            </div>
+       
+        `
+    }
+  
+    
+
+    function move(){
+        green.classList.toggle("slide")
+        bdy.classList.toggle("change")
+        newBdy.classList.toggle("change")
+        newBdy2.classList.toggle("change")
+        ann.classList.toggle("change")
+        beautyText.classList.toggle("change")
+        beautyText2.classList.toggle("change")
+    }
+
+
+    function category(val){
+        localStorage.setItem("categories", val)
+        window.location.href = "category.html"
+    }
+
+    function newMenu(){
+        Menu.style.display ="block"
+    }
+
+    function offMenu(){
+        Menu.style.display ="none"
+    }
+
+    function showProduct(id){
+        localStorage.setItem("productId", id)
+        window.location.href = "product.html"   
+    }
+
+
+    function signin(){
+        window.location.href = "signin-signup.html"
+    }
+
+    function logout(){
+        localStorage.removeItem("loginUser")
+        window.location.href = "index.html"
+    }
+    
+
+    let showCart = document.getElementById("showCart")
+    function fetchCart(){
+        fetch("http://localhost:1234/cart")
+        .then((res)=>res.json())
+        .then((data)=>{
+            cart = data;
+            showCart.innerHTML = cart.length == 0 ? null : cart.length
+            if (showCart.innerHTML == ""){
+                showCart.style.padding = "0"
+            }
+        })
+    }
+    fetchCart()
+
+    function searchBar(inp){
+  localStorage.setItem("searchItem", inp.value)
+  window.location.href = "search.html"
+}
+  
+function searchBar(inp){
+  localStorage.setItem("searchItem", inp.value)
+  window.location.href = "searchresult.html"
+}
+</script>

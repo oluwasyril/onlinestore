@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="star.png">
+    <title>Admin page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-color: rgb(185, 138, 138);
+        }
+        button{
+            cursor: pointer;
+        }
+        #pop-up{
+            background-color: rgb(143, 158, 5);
+            height: fit-content;
+            width: 60%;
+            position: fixed;
+            left: 20%;
+            top: 5%;
+            display: none;
+            padding: 10px 0px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        .pop-up{
+            display: flex;
+            justify-content: center;
+        }
+
+        .update{
+            display: flex;
+           gap: 15px;
+        }
+
+        .cart1 button{
+            
+            background-color: rgb(13, 168, 80);
+            color: white;
+            padding: 6px 13px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+
+        .cart2 button{
+            
+            background-color: red;
+            color: white;
+            padding: 6px 13px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        .product{
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        .product img{
+            height: 70px;
+        }
+
+        #display{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            height: fit-content;
+            width: 300px;
+            padding: 20px 0px;
+            /* background-color: aqua; */
+        }
+        form div{
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+           
+    
+        }
+
+        form button{
+            background-color: rebeccapurple;
+            border: none;
+            border-radius: 5px;
+            color: aliceblue;
+            padding: 7px 13px;
+        }
+        input{
+         width: 60%;
+         padding: 10px 15px;
+         border: none;
+         outline: 1px solid green;
+         border-radius: 5px;
+       
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        .jumia-header{
+            display: flex;
+            align-items:center ;
+           width: 400px;
+           margin-left: -40px;
+        }
+        .jumia-header img{
+            height: 90px;
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        .admin{
+            color: #f29025;
+        }
+        .page{
+            color: aliceblue;
+        }
+
+        .close{
+
+cursor: pointer;
+position: absolute;
+right: -6px;
+top: -6px;
+
+
+}
+
+.fa-circle-xmark{
+font-size: 25px;
+background-color: #f90000;
+border-radius: 100%;
+}
+
+.fa-circle-xmark:hover{
+color: #e61600 !important;
+background-color: #fff;
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        
+        <form action="">
+            <div class="jumia-header"><img src="https://1000logos.net/wp-content/uploads/2022/02/Jumia-Logo-2012.png"> <h1> <span class="admin">Admin</span> <span class="page">page</span> </h1></div>
+            <h2> add new product</h2>
+            <div> <input type="text" placeholder="title" id="title"></div>
+            <div> <input type="text" placeholder="category" id="category"></div>
+            <div> <input type="text" placeholder="description" id="description"></div>
+            <div> <input type="text" placeholder="discount" id="discount"></div>
+            <div> <input type="text" placeholder="price" id="price"></div>
+            <div> <input type="text" placeholder="stock" id="stock"></div>
+            <div> <input type="text" placeholder="rating" id="rating"></div>
+            <div> <input type="text" placeholder="brand" id="brand"></div>
+            <div> <input type="number" placeholder="initialPrice" id="initialPrice"></div>
+            <div>  <input type="text" id="thumbnail" placeholder="product thumbnail"> </div>
+        <div>
+                <input type="text" id="images" placeholder="product images">
+                <button type="button" onclick="imgUrl()">Image url</button>
+        </div>
+           <div>  <button onclick="postProduct(event)"> Post product</button></div>
+        </form>
+    </main>
+    <div id="display"></div>
+    <div id="pop-up">
+    </div>
+</body>
+</html>
+
+<script>
+    let title = document.getElementById("title");
+    let category = document.getElementById("category");
+    let description = document.getElementById("description");
+    let discount = document.getElementById("discount");
+    let price = document.getElementById("price");
+    let stock = document.getElementById("stock");
+    let rating = document.getElementById("rating");
+    let brand = document.getElementById("brand");
+    let initialPrice = document.getElementById("initialPrice");
+    let thumbnail = document.getElementById("thumbnail");
+    let images = document.getElementById("images")
+    let arr = []
+
+
+    function postProduct(ev){
+        ev.preventDefault();
+        let product = {
+            title: title.value,
+            category: category.value,
+            description: description.value,
+            discount: discount.value,
+            price: price.value,
+            stock: stock.value,
+            rating: rating.value,
+            brand: brand.value,
+            initialPrice: initialPrice.value,
+            thumbnail: thumbnail.value,
+            image: arr
+        }
+        fetch("http://localhost:1234/product", {
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(product),
+            method: "POST"
+        }).then((response)=>response.json)
+        .then((data)=>{
+            alert("Product Created")
+            console.log(data)
+        })
+        .catch((err)=>{
+            alert("Something went wrong")
+            console.log(err);
+        })
+    
+    }
+
+
+
+        function imgUrl(){
+            arr.push(images.value)
+            images.value = ""
+
+        }
+
+
+
+    let display = document.getElementById("display")
+    let cart;
+     fetch("http://localhost:1234/product")
+     .then( (shopping) => shopping.json())
+   
+    .then((shop) => {
+        cart = shop
+        for (i = 0; i < shop.length; i ++){
+            let id = shop[i].id
+            display.innerHTML += ` <div class="product" > 
+                <div>
+                    <div onclick="showProduct(${id})" id="${id}">       
+                        <div>  <img src="${shop[i].thumbnail}"></div>
+                        <div class="title">   ${shop[i].title}</div>
+                        <div class="price"> ${shop[i].price} </div>
+                        <div class="discount">  <span>Stock:</span> ${shop[i].stock} items left</div></div>
+                        <div class="discount">  <span>Discount:</span> ${shop[i].discount}%</div></div>
+
+
+                    <div class="update"> 
+                         <div class="cart1" onclick="edit(${id})"> <button> EDIT </button> </div>
+                         <div class="cart2" onclick="removeItem(${id})"> <button> DELETE </button> </div>
+                    </div>
+                </div>
+             
+               
+            </div> `
+        }
+    })
+    
+
+
+
+    let popUp = document.getElementById("pop-up")
+    function edit(id){
+        popUp.innerHTML = `
+        <div class="pop-up">
+            <div onclick="clse()" class="close"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i></div>
+                <form action="">
+                <h2> update product</h2>
+                <div> <input type="text" placeholder="title" id="title1"></div>
+                <div> <input type="text" placeholder="category" id="category1"></div>
+                <div> <input type="text" placeholder="description" id="description1"></div>
+                <div> <input type="text" placeholder="discount" id="discount1"></div>
+                <div> <input type="text" placeholder="price" id="price1"></div>
+                <div> <input type="text" placeholder="stock" id="stock1"></div>
+                <div> <input type="text" placeholder="rating" id="rating1"></div>
+                <div> <input type="text" placeholder="brand" id="brand1"></div>
+                <div> <input type="number" placeholder="initialPrice" id="initialPrice1"></div>
+                <div>  <input type="text" id="thumbnail1" placeholder="product thumbnail"> </div>
+                <div>
+                    <input type="text" id="images1" placeholder="product images">
+                    <button type="button" onclick="imgUrl1(images1)">Image url</button>
+                </div>
+                <div> <button type="button" onclick="postProduct1(${id})"> Update product</button></div> 
+            </form>
+        </div>
+       
+        `
+        popUp.style.display = "block"
+    }
+
+    let arr1 = []
+
+    function imgUrl1(id){
+        arr1.push(id.value)
+        id.value = ""
+    }
+
+    function postProduct1(id){
+        let title1 = document.getElementById("title1");
+        let category1 = document.getElementById("category1");
+        let description1 = document.getElementById("description1");
+        let discount1 = document.getElementById("discount1");
+        let price1 = document.getElementById("price1");
+        let stock1 = document.getElementById("stock1");
+        let rating1 = document.getElementById("rating1");
+        let brand1 = document.getElementById("brand1");
+        let initialPrice1 = document.getElementById("initialPrice1");
+        let thumbnail1 = document.getElementById("thumbnail1");
+
+        let check = cart.find((e) => e.id == id)
+       
+        check = {
+            title: title1.value,
+            category: category1.value,
+            description: description1.value,
+            discount: discount1.value,
+            price: price1.value,
+            stock: stock1.value,
+            rating: rating1.value,
+            brand: brand1.value,
+            initialPrice: initialPrice1.value,
+            thumbnail: thumbnail1.value,
+            image: arr1
+        }
+        console.log(check)
+        fetch(`http://localhost:1234/product/${id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'PATCH',
+            body: JSON.stringify(check)
+        })
+        setTimeout(() => {
+            window.location.href = "admin.html"
+        }, 500)
+    }
+
+    function removeItem(id){
+        fetch(`http://localhost:1234/product/${id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'DELETE',
+        })
+        setTimeout(() => {
+            window.location.href = "admin.html"
+        }, 500)
+    }
+
+    function clse(){
+    window.location.href = "admin.html"
+}
+</script>
+<script src="all.js"></script>

@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="icon" href="star.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+
+*{
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family:Roboto-Regular ;
+            src: url(Roboto/Roboto-Regular.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Light ;
+            src: url(Roboto/Roboto-Light.ttf);
+        }
+
+        @font-face {
+            font-family:Roboto-Medium ;
+            src: url(Roboto/Roboto-Medium.ttf);
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        body{
+            background-color: #f1f1f2;
+           
+        }
+
+
+                header{
+            height: 70px;
+            width: 100%;
+            background-color: #f1f1f2;
+            }
+
+            .header-one{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ff9900;
+            }
+
+            .header-one img{
+                height: 40px;
+                
+            }
+
+            .header-two{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 85%;
+            }
+
+            .side-one{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+            .side-one a{
+                color: #ff9900;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .side-one a:hover{
+                text-decoration: underline;
+            }
+
+            .side-one img{
+                height: 10px;
+               
+            }
+
+            /* .side-two{
+                display: flex;
+                align-items: center;
+            } */
+
+            .side-two a{
+                text-decoration: none;
+            }
+
+            .side-two img{
+                height: 18px;
+                padding: 3px;
+            }
+
+            .side-two img:hover{
+                filter: invert(71%) sepia(13%) saturate(6556%) hue-rotate(328deg) brightness(98%) contrast(97%);
+    
+            }
+        
+
+            nav{
+                height: 52px;
+                width: 100%;
+                background-color: #ffffff;
+                display: flex;
+                gap: 50px;
+                justify-content: center;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                z-index: 20;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .animation{
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                left: 0;
+                top: 0;
+                background-color: rgb(4, 189, 60);
+                z-index: 40;
+                display: none;
+            }
+
+            .animation p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                color: #fff;
+            }
+
+
+            .first-nav{
+                /* width: 20%; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 40px;
+                
+            
+            }
+
+
+        #newMenu{
+            position: relative;
+            padding: 30px;
+        }
+        .newMenu-content{
+            position: absolute;
+            background-color: #fff;
+            height: fit-content;
+            width: 130px;
+            border-radius: 5px;
+            top: 55px;
+            padding: 8px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            display: none;
+        }
+
+        .newMenu-content::before{
+            content: "";
+            position: absolute;
+            background-color: #ffffff;
+            height: 11px;
+            width: 11px;
+            top: -4px;
+            left: 3px;
+            transform: rotate(45deg);
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            z-index: -1;
+        }
+
+
+        .newMenu-content p{
+              
+              margin-top: 10px;
+              cursor: pointer;
+            
+          }
+
+          .newMenu-content p:nth-child(1){
+            margin-top: 1px;
+          }
+          .newMenu-content p:hover .icon{
+              color:#ff9900 !important;
+          }
+
+          .newMenu-content p:hover{
+              color:#ff9900
+          }
+
+          .newMenu-content span{
+              font-family:Roboto-Light ;
+              font-size: 11px;
+              margin-left: 5px;
+           
+          }
+
+          .icon{
+              font-size: 15px;
+  
+          }
+
+          .fa-house, .fa-kitchen-set{
+              margin-left: -3px;
+          }
+
+          .fa-mobile-screen-button{
+              margin: 1px;
+          }
+
+          .fa-computer, .fa-tv, .fa-shirt, .fa-gamepad, .fa-dumbbell,.fa-chalkboard{
+              margin-left: -4px;
+          }
+
+
+
+
+            .first-nav img{
+                    height: 50px;
+                    margin-left: 30px;
+            }
+
+            .second-nav{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 60%;
+                
+            }
+            .first{
+                display: flex;
+                align-items: center;
+                width: 60%;
+            }
+            .first input{
+                width: 100%;
+                padding: 8px 30px;
+                border-radius:4px;
+                outline: none;
+                border: 1px solid gray;
+            }
+            .fa-magnifying-glass{
+                margin-right: -24px;
+                z-index: 10;
+            }
+
+            .first button{
+                margin-left: 5px;
+                padding: 9px 13px;
+                border-radius:4px;
+                border: none;
+                background-color: #ff9900;
+                color: #fff;
+            }
+
+            .first button:hover{
+                background-color: #E07E1B;
+            }
+
+            .second{
+                position: relative;
+                font-size: 13px;
+            }
+
+            .second button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+            .second button:hover{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-user{
+                color: #ff9900 !important;
+            }
+
+            .second button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+            .fa-user{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        
+          .fa-angle-down{
+            margin-left: 5px;
+          }
+
+          .second button:focus{
+            background-color: #00000038;
+           
+          }
+
+            .second-content{
+                position: absolute;
+                top: 38px;
+                left: -30px;
+                width: 160px;
+                height: 168px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .second:focus-within .second-content{
+                display: block;
+            }
+
+            .sign-in{
+                padding: 12px;
+                border-bottom: 1px solid #f1f1f2;
+            }
+
+            .sign-in button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 8px 20px;
+            }
+
+            .sign-in button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+            .my-account, .order, .saved{
+                padding: 8px;
+                font-family:Roboto-Light ;
+                font-size: 13px;
+
+            }
+
+            .my-account:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .order:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+            .saved:hover{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                background-color: #0000000f;
+            }
+
+
+
+            .account-text, .saved-text{
+                margin-left: 13px;
+                cursor: pointer;
+            }
+            .order-text{
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+            }
+
+            .fa-angle-down{
+                font-size: 10px;
+            }
+
+
+
+            .third{
+                position: relative;
+            }
+
+            .third-content{
+                position: absolute;
+                top: 35px;
+                left: -50px;
+                width: 160px;
+                height: 200px;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 5px;
+                display: none;
+            }
+
+            .third:focus-within .third-content{
+                display: block;
+            }
+
+            .third button{
+                background:none;
+                border: none;
+                padding: 9px 6px;
+                border-radius:4px;
+            }
+
+
+            .third button:focus{
+            background-color: #00000038;
+           
+          }
+
+
+            .third button:hover{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-circle-question{
+                color: #ff9900 !important;
+            }
+
+            .third button:hover .fa-angle-down{
+                color: #ff9900 !important;
+            }
+
+
+            .fa-circle-question{
+            font-size: 14px;
+            margin-right: 5px;
+          }
+         
+
+            .live-chat{
+                padding: 12px;
+                border-top: 1px solid #f1f1f2;
+            }
+
+            .live-chat button{
+                width: 100%;
+                background-color: #ff9900;
+                color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 6px 20px;
+                border-radius: 4px;
+            }
+
+             .live-chat button:hover{
+                background-color: #E07E1B;
+                color: #fff !important;
+            }
+
+
+            .help,.track,.cancel,.return,.payment{
+                padding: 6px;
+                font-family:Roboto-Light ;
+                font-size: 11px;
+                cursor: pointer;
+                }
+
+
+                .help:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .track:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .cancel:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .return:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+            .payment:hover{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                background-color: #0000000f;
+            }
+
+
+            .forth a{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                text-decoration: none;
+                color: #000000;
+                position: relative;
+                display: flex;
+                gap: 4px;
+               
+            }
+
+
+            #showCart{
+                position: absolute;
+                left: 5px;
+                top:-7px;
+                padding: 1px 5px;
+                background-color: #ff9900;
+                font-family:Roboto-Regular ;
+                font-size: 8px;
+                color: #fff;
+                border-radius: 10px;
+            }
+            .forth a:hover{
+                color: #ff9900 !important;
+            }
+
+            .forth a:hover .fa-cart-shopping{
+                color: #ff9900 !important;
+            }
+
+            main{
+                /* height: 2100px; */
+                height: fit-content;
+                padding:5px ;
+                width:90%;
+                margin-top: 30px;
+            }
+
+            .all-main{
+                margin: auto;
+                height: 60vh;
+                width: 80%;
+                /* border-radius: 5px; */
+            }
+
+            section{
+                width: 100%;
+                display: flex;
+                gap: 14px;
+                padding-top: 10px;
+                margin-left: 40px;
+               
+            }
+
+            .left-section{
+                width: 68%;
+                height: fit-content;
+                background-color:#fff ;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+
+            .display{
+                display: flex;
+                gap: 20px;
+           
+            }
+            .img-cont img{
+                width: 200px;
+                height: 200px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: url(glass.png), auto;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+            .flex-img{
+                display: flex;
+                gap: 5px;
+                margin-left: 10px;
+                margin-top: 5px;
+
+            }
+            .flex-img img{
+                height: 50px;
+                width: 50px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+            .big-cont{
+                position: absolute;
+                height: 500px;
+                background-color: rgba(10, 10, 10, 0.267);
+                width: 500px;
+                top: 20px;
+                left: 30%;
+                z-index: 900;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            .big-cont img{
+                height: 65vh;
+                width: 100%;
+                cursor: pointer;
+            }
+            .close{
+                display: flex;
+                justify-content: end;
+                margin-bottom: 20px;
+                cursor: pointer;
+            
+            }
+
+            .fa-circle-xmark{
+               font-size: 25px;
+               background-color: #000;
+               border-radius: 100%;
+            }
+
+            .fa-circle-xmark:hover{
+                color: #e61600 !important;
+                background-color: #fff;
+               
+            }
+            .right-side{
+                width: 100%;
+            }
+
+            .saved-item{
+                height: 25px;
+                width: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                color: #F68B1E;
+                cursor: pointer;
+            }
+
+            .saved-item:hover{
+                background-color: #FCDBB9;
+            }
+
+
+            .store{
+                font-family:Roboto-Regular ;
+                font-size: 10px;
+                width: fit-content;
+                padding: 3px 6px;
+                color: #fff;
+                background-color: #276176;
+                border-radius: 3px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+
+            .title{
+                font-family:Roboto-Regular ;
+                font-size: 18px;
+                color: #4e4e50;
+                margin-top: 5px;
+            }
+            .left-text{
+                font-family:Roboto-Regular ;
+                font-size: 12px;
+                color: #4e4e50;
+            }
+
+            .right-text{
+                font-family:Roboto-Regular ;
+                font-size: 12px;
+                color: #264996;
+                cursor: pointer;
+            }
+            .right-text:hover{
+                text-decoration: underline;
+            }
+
+            .fa-star-half-stroke, .fa-star{
+                font-size: 12px;
+            }
+
+            .rating{
+                margin-top: 3px;
+            }
+
+            .deal{
+                font-family:Roboto-Regular ;
+                font-size: 10px;
+                width: fit-content;
+                padding: 3px 6px;
+                color: #f4f2f2;
+                background-color: #6aacd5;
+                border-radius: 3px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                margin-top: 5px;
+            }
+
+            .flash{
+                height: 90px;
+                width: 100%;
+               border: 0.5px solid #e61600;
+                margin-top: 12px;
+                border-radius: 5px;
+            }
+
+            .flash-sales{
+                /* width: 100%; */
+                height: 15px;
+                padding: 10px;
+                background-color: #e61600;
+                border-radius: 5px 5px 0 0;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-family:Roboto-Light ;
+                font-size: 12px;
+            }
+
+            .flash-sales img{
+                height: 25px;
+            }
+
+            .for-price{
+                margin-top: 7px;
+                margin-left: 7px;
+            }
+
+            .price{
+              
+                font-family:Roboto-Medium;
+                font-size: 18px;
+                /* padding: 5px; */
+            }
+
+            .discount{
+                padding: 4px;
+                background-color: #FEF3E9;
+                font-family:Roboto-Light ;
+                font-size: 10px;
+                color: #f68b1f;
+            }
+
+            .for-stock{
+                position: relative;
+                margin-top: 2px;
+            }
+
+            .stock{
+                font-family:Roboto-Light ;
+                font-size: 10px;
+                color: #4e4e50;
+                margin-left: 7px;
+            }
+
+         
+
+            .range{
+                height: 6px;
+                width: 280px;
+                background-color: rgb(174, 172, 172);
+                position: absolute;
+                top: 8px;
+                left: 80px;
+                border-radius: 5px;
+            }
+
+            .range::before{
+                content: "";
+                height: 6px;
+                width: 200px;
+                background-color: #ff9900;
+                position: absolute;
+                border-radius: 5px 0 0 5px;
+            
+            }
+
+           .add-cart{
+            width: 100%;
+            margin-top: 10px;
+           }
+
+           .add-cart button{
+                width: 100%;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #f68b1f;
+                color: #fff;
+           }
+
+           .add-cart button:hover{
+            background-color: #E07E1B;
+           }
+
+
+
+           .right-section{
+                width: 25%;
+                height: fit-content;
+               }
+
+            .all-first{
+                height: fit-content;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          
+            }
+
+            .delivery{
+                padding: 10px;
+                border-bottom: 1px solid #f4f4f5;
+                color: #4e4e50;
+            }
+
+            .delivery h4{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                color: #264996;
+            }
+
+            .express{
+                padding: 5px;
+                border-bottom: 1px solid #f4f4f5;
+            }
+
+            .express1 img{
+                height: 15px;
+            }
+
+            .express2{
+                font-family:Roboto-Regular ;
+                font-size: 10px;
+                color: #4e4e50;
+                padding-bottom: 4px;
+                /* width: 70%; */
+            }
+
+            .express2 span{
+                color:#264996;
+                cursor: pointer;
+            }
+
+            .express2 span:hover{
+                text-decoration: underline;
+            }
+
+            .location{
+                padding: 5px;
+            }
+
+            .location1{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                color: #4e4e50;
+            }
+
+            .location2{
+                width: 100%;
+                margin-top: 12px;
+            
+            }
+
+            .location2 select{
+                width: 100%;
+                padding: 10px;
+                border-radius: 3px;
+                color: #4e4e50;
+                border: 0.3px solid gray;
+                outline: none;
+            }
+
+            .location2 select:focus{
+                border: 0.3px solid #f68b1f;
+            }
+
+            .door-delivery{
+                margin-top: 10px;
+                display: flex;
+                gap: 7px;
+               
+            }
+
+            .for-door-delivery{
+                padding: 5px;
+                border: 0.3px solid rgba(128, 128, 128, 0.6);
+                border-radius: 3px;
+            }
+
+            .door{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                /* color: #4e4e50; */
+            }
+
+            .door span{
+                font-family:Roboto-regular ;
+                font-size: 10px;
+                margin-left: 35px;
+                color: #264996;
+                cursor: pointer;
+            }
+
+            .door span:hover{
+                text-decoration: underline;
+            }
+
+            .delivery-fee, .delivery-date{
+                font-family:Roboto-regular ;
+                font-size: 9px;
+                color: #4e4e50;
+            }
+
+            .delivery-fee span, .delivery-date span{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                color: #000000;
+            }
+
+            .pick-up{
+                padding-bottom: 5px;
+                border-bottom: 1px solid #f4f4f5c7;
+            }
+          
+            .return-policy{
+                display: flex;
+                gap: 7px;
+                padding-top: 8px;
+            }
+
+            .for-return{
+                padding: 5px;
+                border: 0.3px solid rgba(128, 128, 128, 0.6);
+                border-radius: 3px;
+            }
+
+            .return2 h4{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+            }
+
+            .return2 p{
+                font-family:Roboto-regular ;
+                font-size: 9px;
+                color: #4e4e50;
+            }
+
+            .return2 span{
+                font-family:Roboto-regular ;
+                font-size: 10px;
+                color: #264996;
+                cursor: pointer;
+            }
+
+            .return span:hover{
+                text-decoration: underline;
+            }
+
+            .second-all{
+                height: fit-content;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                margin-top: 10px;
+            }
+      
+            .seller-info{
+                padding: 10px;
+                border-bottom: 1px solid #f4f4f5;
+                color: #4e4e50;
+            }
+
+            .seller-info h4{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+                color: #264996;
+            }
+
+            .seller-all{
+                padding: 7px;
+            }
+
+            .seller-info2{
+                font-family:Roboto-Regular ;
+                font-size: 13px;
+            }
+
+            .seller-info3{
+                font-family:Roboto-Regular ;
+                font-size: 11px;
+                color: #4e4e50;
+                margin-top: 4px;
+            }
+
+            .third-all{
+                height: fit-content;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                margin-top: 10px;
+            }
+
+            .third-all img{
+                height: 100px;
+                /* width: 120px; */
+            }
+
+            .right-list{
+                display: flex;
+                gap: 4px;
+                padding: 2px;
+                
+            }
+
+            .title{
+                font-family:Roboto-Regular ;
+                font-size: 12px;
+                color: #4e4e50;
+            }
+
+            .for-add-cart{
+                padding: 7px;
+                width: 94%;
+            }
+
+            .all-store{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+ 
+            .welcome{
+            text-transform: uppercase;
+         }
+
+         .saved a{
+            text-decoration: none;
+            color: black;
+         }
+         
+         .new-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .new-btn button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8%;
+            padding: 10px;
+            /* height: 20px; */
+         }
+
+         .new-btn span{
+            font-family:Roboto-Regular ;
+            font-size: 15px;
+            padding: 0px 10px;
+         }
+
+         .order a{
+                text-decoration: none!important;
+                color: #000000;
+              }
+      
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-one"> 
+            <img src="ann.gif" alt="">
+    
+        
+        </div>
+
+        <div class="header-two">
+            <div class="side-one">
+                <img src="star.png" alt="">
+                <a href="">Sell on Jumia</a>
+            </div>
+            <div class="side-two">
+               <a href="">  <img src="jumia.png" alt=""> </a> 
+               <a href=""> <img src="jumiapay.png" alt=""> </a> 
+               <a href=""> <img src="jumiafood.png" alt=""> </a> 
+               <a href=""> <img src="jumiaparty.png" alt=""> </a> 
+                <a href=""> <img src="jumialog.png" alt=""> </a>
+
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        
+     <div class="animation" id="animation"> <p> You've successfully added it to the cart </p> </div>
+        <div class="first-nav">
+            <div id="newMenu" onmouseover="newMenu()" onmouseout="offMenu()"><i class="fa-solid fa-bars" ></i>
+                <div class="newMenu-content" id="Menu">
+
+                    <p onclick="category('Grocery')"> <i class="fa-solid fa-apple-whole icon" style="color: #000000;"></i> <span> Supermarket</span></p>
+                    <p onclick="category('Health & beauty')"> <i class="fa-solid fa-spray-can-sparkles icon" style="color: #000000;"></i><span> Health & Beauty</span></p>
+                    <p onclick="category('Home & office')"> <i class="fa-solid fa-house icon" style="color: #000000;"></i> <span> Home & Office</span></p>
+                    <p onclick="category('Appliances')"> <i class="fa-solid fa-kitchen-set icon" style="color: #000000;"></i> <span> Appliances</span></p>
+                    <p onclick="category('Smartphone')"> <i class="fa-solid fa-mobile-screen-button icon" style="color: #000000;"></i> <span> Phones & Tablets</span></p>
+                    <p onclick="category('Computing')"> <i class="fa-solid fa-computer icon" style="color: #000000;"></i><span> Computing</span></p>
+                    <p onclick="category('Electronics')"> <i class="fa-solid fa-tv icon" style="color: #000000;"></i> <span> Electronics</span></p>
+                    <p onclick="category('Fashion')"> <i class="fa-solid fa-shirt icon" style="color: #000000;"></i><span> Fashion</span></p>
+                    <p onclick="category('Baby products')"> <i class="fa-solid fa-baby icon" style="color: #000000;"></i> <span> Baby Products</span></p>
+                    <p onclick="category('Gaming')"> <i class="fa-solid fa-gamepad icon" style="color: #000000;"></i> <span class="gaming"> Gaming</span></p>
+                    <p onclick="category('Sporting')"> <i class="fa-solid fa-dumbbell icon" style="color: #000000;"></i><span> Sporting Goods</span></p>
+                    <p onclick="category('other')"> <i class="fa-solid fa-chalkboard icon" style="color: #000000;"></i><span> Other category</span></p>
+
+                </div>
+            </div>
+
+            <div class="home-images"> 
+                 <a href="index.html"> <img src="Jumia-Logo.png" alt=""></a> 
+            </div>
+        </div>
+
+        <div class="second-nav">
+
+
+            <div class="first">
+                <i class="fa-solid fa-magnifying-glass" style="color: #adadad;"></i>
+                <input type="text" placeholder="Search products, brands and categories" id="inp">
+                <button onclick="searchBar(inp)"> SEARCH</button>
+            </div>
+
+
+        
+            <div class="second">
+                
+                <button id="acct">
+                </button>
+                
+                <div class="second-content">
+                    <div class="sign-in" id="signIn"></div>
+
+                </div>
+                
+            </div>
+            <div class="third">
+              
+                 <button>
+                    <i class="fa-regular fa-circle-question" style="color: #000000;"></i>
+                    Help
+                    <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+                </button>
+                
+                <div class="third-content">
+                   <div class="help"> Help Center</div>
+                   <div class="track"> Place & track order</div>
+                   <div class="cancel"> Order cancellation</div>
+                   <div class="return"> Retruns & Refunds</div>
+                   <div class="payment"> Payment & Jumia account </div>
+                   <div class="live-chat"> <button> LIVE CHAT</button></div>
+                </div>
+              
+               
+            </div>
+            <div class="forth">
+              
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>  <div>Cart</div>  
+                    <span id="showCart"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="all-main">
+            <section>
+                <div class="left-section">
+                    <div class="display" id="display"></div>
+                </div>
+
+                <div class="right-section"> 
+
+                    <div class="all-first">
+                        <div class="delivery"> <h4> DELIVERY & RETURNS </h4> </div>
+                        <div class="express"> 
+                            <div class="express1"><img src="express.png" alt=""></div>
+                            <div class="express2"> Free delivery on thousands of products in Lagos, Ibadan & Abuja <span>Details</span></div>
+                        </div>
+                        <div class="location">
+                            <div class="location1">Choose your location</div>
+                            <div class="location2">
+                                <select>
+                                    <option value="">Select your state</option>
+                                    <option value="">Lagos</option>
+                                    <option value="">Oyo</option>
+                                    <option value="">Ogun</option>
+                                    <option value="">Abuja</option>
+                                    <option value="">Edo</option>
+                                </select>
+                            </div>
+    
+                             <div class="location2">
+                                <select>
+                                    <option value="">Select your LGA</option>
+                                    <option value="">Other</option>
+                                    <option value="">Other</option>
+                                    <option value="">Other</option>
+                                    <option value="">Other</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </div>
+    
+                            <div class="door-delivery">
+    
+                                <div class="door-delivery1">
+                                    <div class="for-door-delivery">
+                                        <i class="fa-solid fa-truck" style="color: #2d2d2ded;"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="door-delivery2">
+                                    <h4 class="door">Door Delivery <span>Details</span></h4>
+                                    <p class="delivery-fee">Delivery <span>₦ 1000</span> </p>
+                                    <p class="delivery-date">Delivery by <span>23 August</span> when you order within next <span>36mins</span></p>
+                                </div>
+                            </div>
+    
+    
+                            <div class="door-delivery pick-up">
+    
+                                <div class="door-delivery1">
+                                    <div class="for-door-delivery">
+                                        <i class="fa-solid fa-gifts" style="color: #2d2d2ded;;"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="door-delivery2">
+                                    <h4 class="door">Pickup Station <span>Details</span></h4>
+                                    <p class="delivery-fee">Delivery <span>₦ 500</span> </p>
+                                    <p class="delivery-date pick">Available for pick up from <span>23 August</span> when you order within next <span>36mins</span></p>
+                                </div>
+                            </div>
+    
+                            <div class="return-policy">
+                                <div class="return1">
+                                    <div class="for-return">
+                                        <i class="fa-solid fa-truck-ramp-box" style="color: #313235;"></i>
+                                    </div>
+                                </div>
+                                <div class="return2">
+                                    <h4>Return Policy</h4>
+                                    <p>
+                                        Free return within 15 days for Official Store items and 7 days for other eligible items. <span>See more</span>
+                                    </p>
+                                </div>
+                            </div>
+    
+                            
+                        </div>
+                    </div>
+
+                    <div class="second-all">
+                        <div class="seller-info"> <h4>SELLER INFORMATION</h4> </div>
+                        <div class="seller-all">
+                            <p class="seller-info2">Jumia</p>
+                            <p class="seller-info3"> 100% Seller Score</p>
+                        </div>
+                    </div>
+
+                    <div class="third-all">
+                        <div id="rightItem">
+
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <div id="bigger"></div>
+
+   
+</body>
+<script src="all.js"></script>
+</html>
+
+<script>
+    let display = document.getElementById("display")
+    let id = localStorage.getItem("productId")
+    let allProduct = JSON.parse(localStorage.getItem("newshop"))
+    let bigger = document.getElementById("bigger")
+    let rightItem = document.getElementById("rightItem")
+    let Menu = document.getElementById("Menu")
+    let acct = document.getElementById("acct")
+    let sign_in = document.getElementById("signIn")
+    let loggedUser = JSON.parse(localStorage.getItem("loginUser"))
+    let savedProducts = JSON.parse(localStorage.getItem("savedP")) || []
+    if (loggedUser != null){
+        acct.innerHTML = `<div class="welcome"> HI ${loggedUser.name} </div>`
+        sign_in.innerHTML = `
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+        <div class="order" > <a href="order.html"><i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></a></div>
+        <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        <button onclick="logout()">LOG OUT</button>
+        `
+    }
+    else{
+        acct.innerHTML = `
+        <i class="fa-regular fa-user" style="color: #000000;"></i>
+        Account
+        <i class="fa-solid fa-angle-down" style="color: #000000;"></i>
+        `
+        sign_in.innerHTML = `
+        <button onclick="signin()">SIGN IN</button>
+        <div class="my-account"> <i class="fa-regular fa-user" style="color: #000000;"></i> <span class="account-text"> My account</span> </div>
+         <div class="order"> <i class="fa-solid fa-shop" style="color: #000000;"></i> <span class="order-text"> Orders</span></div>
+         <div class="saved"> <i class="fa-regular fa-heart" style="color: #000000;"></i> <a href="saved-item.html"> <span class="saved-text">Saved Item</span></a></div>
+        `
+    }
+
+
+
+    let found = allProduct.find((e) => e.id == id)
+    console.log(found)
+    let myObj = {
+        item: found,
+    }
+    console.log(id)
+
+    if (found){
+    display.innerHTML = `
+     <div class="img-cont">
+        <img id="img-chng" src=${found.image[1]} onclick="biggerImg()">
+        <div class="flex-img">
+            <img src=${found.image[0]} onclick="changeImg(${0})">
+            <img src=${found.image[1]} onclick="changeImg(${1})">
+            <img src=${found.image[2]} onclick="changeImg(${2})">
+           
+        </div>
+    </div>
+     <div class="right-side">
+        <div class="all-store">
+            <div class="store"> Official Store</div>
+            <div class="saved-item" onclick="save(${found.id})" id ="heart"><i class="fa-regular fa-heart"></i></div>
+        </div>
+        
+        <div class="title">   ${found.description}</div>
+        <div> <span class="left-text">Brand:</span> <span class="right-text">${found.brand}</span></div>
+        <div> <span class="left-text">Category:</span> <span class="right-text">${found.category}</span></div>
+        <div class="rating">
+             <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+            <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+            <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+            <i class="fa-solid fa-star" style="color: #f6b01f;"></i>
+            <i class="fa-regular fa-star-half-stroke" style="color: #f6b01f;"></i>
+            <span class="right-text">${found.rating} ratings</span>
+        </div>
+        <div class="deal">Anniversary Deal </div>
+        <div class="flash">
+            <div class="flash-sales">
+                <img src="tag.png" alt=""> <span> Flash Sales</span>
+            </div>
+
+            <div class="for-price"> <span class="price"> ${found.price}</span> <span class="discount">- ${found.discount}% </span></div>
+            <div class="for-stock">  <span class="stock"> Units available</span> <span class="range"></span></div>
+        </div>
+        <div class="add-cart" id="cartDiv"> <button onclick="addCart(${found.id})" id="cartBtn"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i> ADD TO CART</button></div>
+    </div>
+    `
+
+    rightItem.innerHTML = `
+        <div class="right-list">
+            <div> <img src="${found.image[1]}"></div>
+            <div>
+                <div class="title">   ${found.title}</div>
+                <div class="for-price"> <span class="price"> ${found.price}</span> <span class="discount">- ${found.discount}% </span></div>
+            </div>
+        </div>
+        <div class="add-cart for-add-cart"> <button onclick="addCart(${found.id})" id="cartBtn2"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i> ADD TO CART</button></div>
+    `
+}
+let search = savedProducts.find((e) => e.item.id == id)
+if (search){
+    document.getElementById("heart").style.color = "blue"
+}
+else{
+    document.getElementById("heart").style.color = "orange"
+}
+let imgChng = document.getElementById("img-chng")
+let imgSc = imgChng.src
+function biggerImg(){
+    bigger.innerHTML = `
+    <div class="big-cont">
+        <div onclick="clse()" class="close"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i></div>
+        <img src="${imgSc}" alt="">
+    </div>
+    `
+}
+function clse(){
+    bigger.innerHTML =""
+}
+function changeImg(i){
+    imgChng.src=found.image[i]
+    imgSc = imgChng.src
+}
+
+function category(val){
+        localStorage.setItem("categories", val)
+        window.location.href = "category.html"
+    }
+
+    function newMenu(){
+        Menu.style.display ="block"
+    }
+
+    function offMenu(){
+        Menu.style.display ="none"
+    }
+
+
+    function signin(){
+        window.location.href = "signin-signup.html"
+    }
+
+    function logout(){
+        localStorage.removeItem("loginUser")
+        window.location.href = "index.html"
+    }
+
+    function save(id){
+        let search = savedProducts.find((e) => e.item.id == id)
+        if (search){
+            document.getElementById("heart").style.color = "orange"
+            savedProducts.splice(search, 1)
+            let newSave = JSON.stringify(savedProducts)
+            localStorage.setItem("savedP", newSave)
+        }
+        else{
+            savedProducts.push(myObj)
+            let newSave = JSON.stringify(savedProducts)
+            localStorage.setItem("savedP", newSave)
+            document.getElementById("heart").style.color = "blue"
+        }
+    }
+    let cart;
+    let animation = document.getElementById("animation")
+    function addCart(id){
+        let search = allProduct.find((e) => e.id == id)
+        search.qty = 1
+        search.stock -= 1
+        fetch("http://localhost:1234/cart", {
+            headers:{
+                "Content-type": "application/json"
+            },
+            method: "POST",
+            body: JSON.stringify(search)
+        })
+        animation.style.display = "block"
+        setTimeout(() =>{
+        animation.style.display = "none"
+        }, 900)
+        let cartBtn = document.getElementById("cartBtn")
+        let cartBtn2 = document.getElementById("cartBtn2")
+        cartBtn.style.display = "none"  
+        cartBtn2.style.display = "none"  
+        fetchCart()
+
+       
+    }
+    let showCart = document.getElementById("showCart")
+    let cartDiv = document.getElementById("cartDiv")
+    function fetchCart(){
+        id = found.id
+        fetch("http://localhost:1234/cart")
+        .then((res)=>res.json())
+        .then((data)=>{
+            cart = data;
+            showCart.innerHTML = cart.length == 0 ? null : cart.length
+            if (showCart.innerHTML == ""){
+                showCart.style.padding = "0"
+            }
+            let search = cart.find((e) => e.id == id)
+            if (search){
+                cartBtn.style.display = 'none'
+                cartBtn2.style.display = 'none'
+                cartDiv.innerHTML = `<div class="new-btn"><button onclick="decreaseQuant(${search.id})"><i class="fa-solid fa-minus"></i></button><span>${search.qty}</span> <button onclick="increaseQuant(${search.id})"><i class="fa-solid fa-plus"></i></button></div>`
+            }
+            else{
+                cartBtn.style.display = 'block'
+            }
+        })
+    }
+
+    let newCart;
+    fetch("http://localhost:1234/product")
+     .then( (shopping) => shopping.json())
+     .then((prod) =>{
+        newCart = prod
+     })
+    function increaseQuant(id){
+        let seen = cart.find((e) => e.id == id)
+        let found2 = newCart.find((e) => e.id == id)
+        if (seen.stock == 0){
+            alert("Sorry, we are out of stock.")
+        }
+        else{
+            seen.qty++
+            seen.stock--
+            found2.stock--
+            let newPrice = parseInt(seen.initialPrice) * seen.qty
+            fetch(`http://localhost:1234/cart/${id}`, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'PATCH',
+                body: JSON.stringify(seen)
+            })
+            cartDiv.innerHTML = `<div class="new-btn"><button onclick="decreaseQuant(${seen.id})"><i class="fa-solid fa-minus"></i></button><span>${seen.qty}</span> <button onclick="increaseQuant(${seen.id})"><i class="fa-solid fa-plus"></i></button></div>`
+        }
+    }
+
+
+    function decreaseQuant(id){
+        let seen = cart.find((e) => e.id == id)
+        let found2 = newCart.find((e) => e.id == id)
+        if (seen.qty == 1){
+            alert("You cannot reduce the stock")
+        }
+        else{
+            seen.qty--
+            seen.stock++
+            found.stock++
+            let newPrice = parseInt(seen.initialPrice) * seen.qty
+            fetch(`http://localhost:1234/cart/${id}`, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'PATCH',
+                body: JSON.stringify(seen)
+            })
+            cartDiv.innerHTML = `<div class="new-btn"><button onclick="decreaseQuant(${seen.id})"><i class="fa-solid fa-minus"></i></button><span>${seen.qty}</span> <button onclick="increaseQuant(${seen.id})"><i class="fa-solid fa-plus"></i></button></div>`
+            }
+    }
+
+    fetchCart()
+
+
+    function searchBar(inp){
+  localStorage.setItem("searchItem", inp.value)
+  window.location.href = "searchresult.html"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
